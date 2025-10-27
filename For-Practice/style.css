@@ -1,0 +1,22 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.today-actions
+{
+    height: 300px;
+    width: 100%;
+}
+.today-actions h1
+{
+    text-align: center;
+}
+.today-actions ul
+{
+    background-color: #009999;
+    width: 400px;
+    border: 15px solid pink;
+    padding: 50px;
+    margin: 20px;
+}
