@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Library📚</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Little Library 📚</h1>
+        <nav>
+            <ul>
+                <li><a href="#library">Books 📚</a></li>
+                <li><a href="#suggest">Suggest a Book ✏️</a></li>
+                <li><a href="#comments">Visitor Comments 📝</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Books Section -->
+    <hr>
+    <section id="library">
+        <h2>Books in My Library</h2>
+
+        <!-- Book 1 -->
+        <article>
+            <h3>Book: The Prophet's Influence</h3>
+            <img src="https://www.jarir.com/cdn-cgi/image/fit=contain,width=380,height=380,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/4/9/491569.jpg" alt="The Prophet's Influence" width="200" height="200">
+            <p>Author: Omar Taher | Year: 2017</p>
+            
+            <details>
+                <summary>Book Description</summary>
+                <p>Short stories inspired by the Prophet's biography, where Omar Taher narrates in his enjoyable and touching style about 12 men and women around the Prophet.</p>
+            </details>
+            <p>To purchase the book <a href="https://www.jarir.com/arabic-books-491569.html?srsltid=AfmBOoqM4CabkbiMPkHdW2isBelxJkJZgUIlyC3guU2kbIEAJUYRXn86">click here</a></p>
+
+            <p>Rate this book:</p>
+            <form>
+                <label><input type="radio" name="book1_rating" value="1">⭐</label><br>
+                <label><input type="radio" name="book1_rating" value="2">⭐⭐</label><br>
+                <label><input type="radio" name="book1_rating" value="3">⭐⭐⭐</label><br>
+                <label><input type="radio" name="book1_rating" value="4">⭐⭐⭐⭐</label><br>
+                <label><input type="radio" name="book1_rating" value="5">⭐⭐⭐⭐⭐</label><br>
+                <br>
+                <label><input type="checkbox" name="book1_fav"> 🩷 Add to Favorites</label>
+            </form>
+        </article>
+
+        <!-- Book 2 -->
+        <article>
+            <h3>Book: The Subconscious Mind</h3>
+            <img src="https://m.media-amazon.com/images/I/71u9V09aUxL._AC_UF1000,1000_QL80_.jpg" alt="The Subconscious Mind" width="150" height="200">
+            <p>Author: Joseph Murphy | Year: 1963</p>
+            
+            <details>
+                <summary>Book Description</summary>
+                <p>This book explores the power of the subconscious mind and how to use it to achieve success and happiness in life.</p>
+            </details>
+            <p>To purchase the book <a href="https://amzn.eu/d/9XTPtXI">click here</a></p>
+
+            <p>Rate this book:</p>
+            <form>
+                <label><input type="radio" name="book2_rating" value="1">⭐</label><br>
+                <label><input type="radio" name="book2_rating" value="2">⭐⭐</label><br>
+                <label><input type="radio" name="book2_rating" value="3">⭐⭐⭐</label><br>
+                <label><input type="radio" name="book2_rating" value="4">⭐⭐⭐⭐</label><br>
+                <label><input type="radio" name="book2_rating" value="5">⭐⭐⭐⭐⭐</label><br>
+                <br>
+                <label><input type="checkbox" name="book2_fav"> 🩷 Add to Favorites</label>
+            </form>
+        </article>
+
+    </section>
+
+    <!-- Suggest a New Book -->
+    <hr>
+    <section id="suggest">
+        <h2>Suggest a New Book ✏️</h2>
+        <form action="#" method="post">
+            <label for="book_name">Book Name:</label>
+            <input type="text" id="book_name" name="book_name" placeholder="Enter the book name"><br>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" placeholder="Enter the author's name"><br>
+
+            <label for="year">Year of Publication:</label>
+            <input type="text" id="year" name="year" placeholder="Enter the year"><br>
+
+            <label for="genre">Book Genre:</label>
+            <select id="genre" name="genre">
+                <option value="fiction">Fiction</option>
+                <option value="sci-fi">Science Fiction</option>
+                <option value="mystery">Mystery</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="comments_suggest">Your Notes:</label><br>
+            <textarea id="comments_suggest" name="comments_suggest" rows="4" placeholder="Write any notes"></textarea><br>
+
+            <input type="submit" value="Submit Suggestion"><br>
+        </form>
+    </section>
+
+    <!-- Visitor Comments -->
+    <hr>
+    <section id="comments">
+        <h2>Visitor Comments 📝</h2>
+        <form action="#" method="post">
+            <label for="visitor_name">Your Name:</label>
+            <input type="text" id="visitor_name" name="visitor_name" placeholder="Enter your name"><br>
+
+            <label for="visitor_comment">Your Comment:</label><br>
+            <textarea id="visitor_comment" name="visitor_comment" rows="4" placeholder="Write your comment"></textarea><br>
+
+            <input type="submit" value="Submit Comment">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright © 2025 My Little Library | <a href="#library">Back to Top</a></p>
+    </footer>
+
+</body>
+</html>
