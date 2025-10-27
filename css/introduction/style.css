@@ -33,19 +33,22 @@ header h1
     justify-content: center;
     text-decoration: none;
     flex-direction: row;
-    height: 400px;
+    height: 470px;
     width: 100%;
     text-decoration: none;
 }
 .hobbies .list
 {
     width: 250px;
-    height: 100px;
+    height: 400px;
     padding: 10px;
     margin: 15px;
     display: block;
     align-items: center;
     justify-content: center;
+    border-radius: 50px;
+    background-color: plum;
+    border: 1px double purple;
 }
 .hobbies .list h2
 {
