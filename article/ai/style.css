@@ -117,6 +117,34 @@ section:nth-child(even) {
     width: 100%;
   }
 }
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-item {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+
+  .timeline-container::before {
+    display: none;
+  }
+}
+
 
 .timeline-horizontal {
   text-align: center;
