@@ -1,0 +1,246 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    font-size: 10rem;
+}
+
+.nav-link-custom {
+    color: #000 !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.nav-link-custom:not(:last-child):after {
+    content: '/';
+    position: absolute;
+    right: -10px;
+    color: #6c757d;
+}
+
+.social-icon-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-color: #000 !important;
+}
+
+.stat-description {
+    max-width: 150px;
+    line-height: 1.3;
+}
+
+.orange-blob{
+    z-index: 1;
+}
+.col1-hero{
+    z-index: 2;
+}
+
+.main-image-container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(5%);
+}
+
+.signature-text {
+    position: absolute;
+    top: 80px;
+    left: 180px;
+    font-size: 3rem; 
+    font-family: cursive;
+    color: rgba(255, 255, 255, 0.7);
+    transform: rotate(-10deg);
+    z-index: 10;
+}
+
+.globe-icon-btn {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 20;
+}
+
+.small-image-gallery {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 20;
+}
+
+.small-img-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow-box {
+    background-color: #fff;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.project-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image-wrapper {
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background-color: #f8f8f8;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.skill-block {
+    background-color: #fcfcfc;
+    border-color: #eee !important;
+    transition: background-color 0.3s ease;
+}
+
+.skill-block:hover {
+    background-color: #fff7e6;
+    border-color: #ffa500 !important;
+}
+
+.contact-section {
+    background-color: #ffa500;
+}
+
+.contact-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+}
+
+.contact-btn {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+}
+.footer-social-icon:hover {
+    color: #ffa500 !important;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffa500 !important;
+}
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 8rem; 
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 6rem;
+    }
+    .orange-bg-box {
+        max-width: 100%;
+        height: 600px; 
+    }
+    .stats-section {
+        flex-direction: column;
+    }
+    .stats-section > div {
+        margin-bottom: 1.5rem;
+    }
+    .stat-description {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 4rem; 
+    }
+    .orange-bg-box {
+        height: 450px;
+        clip-path: polygon(5% 0, 95% 10%, 100% 60%, 85% 95%, 25% 100%, 0 70%, 15% 30%);
+    }
+    .signature-text {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-10deg);
+        font-size: 2rem; 
+    }
+    .small-image-gallery {
+        bottom: 15px;
+        left: 15px;
+    }
+    .small-img-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+}
