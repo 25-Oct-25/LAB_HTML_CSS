@@ -1,0 +1,207 @@
+/* General Styles */
+:root {
+    --spotify-green: #1DB954;
+    --dark-bg: #191414;
+    --light-text: #FFFFFF;
+    --gray-text: #B3B3B3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    direction: ltr; /* Set direction to Left-to-Right for English */
+}
+
+a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--spotify-green);
+}
+
+/* --- Header/Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px; /* Logo size */
+    /* filter: invert(1); */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links .separator {
+    width: 1px;
+    height: 20px;
+    background-color: var(--light-text);
+    margin: 0 10px;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: var(--light-text);
+    color: #000;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: var(--spotify-green);
+    color: var(--light-text);
+}
+
+.menu-icon {
+    display: none; /* Hide menu icon on large screens */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), var(--dark-bg) 70%), url('hero_background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* Space for fixed navbar */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: var(--spotify-green);
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: var(--light-text);
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--spotify-green);
+    color: var(--dark-bg);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #1ed760; /* Lighter shade of green */
+    transform: scale(1.05);
+}
+
+.hero-content p {
+    margin-top: 15px;
+    color: var(--gray-text);
+    font-size: 14px;
+}
+
+/* --- Features Section --- */
+.features-section {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #000;
+}
+
+.features-section h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: var(--light-text);
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #282828;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid var(--spotify-green);
+}
+
+.card h3 {
+    color: var(--spotify-green);
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p {
+    color: var(--gray-text);
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    border-top: 1px solid #282828;
+    color: var(--gray-text);
+    font-size: 14px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* Hide links on small devices */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+    /* ... (Rest of media queries are standard CSS and don't need translation) */
+}
