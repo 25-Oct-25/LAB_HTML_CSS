@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-bg: linear-gradient(120deg, #b8c6db, #f5f7fa); /* خلفية بتدرج ناعم */
+  --primary-color: #5a67d8; 
+  --secondary-color: #48bfe3; 
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* ----------------------------- */
+/* BODY */
+/* ----------------------------- */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--main-bg);
+  -webkit-background-clip: border-box; /* يطبق التدرج بشكل صحيح */
+  background-clip: border-box;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------- */
+/* CONTAINER */
+/* ----------------------------- */
+.cv-container {
+  width: 85%;
+  max-width: 900px;
+  margin: 50px auto;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ----------------------------- */
+/* PERSONAL INFO HEADER */
+/* ----------------------------- */
+.personal-info {
+  background: linear-gradient(135deg, #5a67d8, #48bfe3, #74ebd5); /* تدرج أنيق ومتناسب */
+  color: #f3f7f5;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+  animation: slideDown 1s ease-in-out;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ----------------------------- */
+/* AVATAR */
+/* ----------------------------- */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ----------------------------- */
+/* TEXT INSIDE HEADER */
+/* ----------------------------- */
+.personal-info h1 {
+  margin-top: 15px;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffffff, #e2ecff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.personal-info address {
+  font-style: normal;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------------- */
+/* SECTIONS */
+/* ----------------------------- */
+.cv-section {
+  padding: 30px 40px;
+  border-bottom: 1px solid #eaeaea;
+  animation: fadeInSection 1.3s ease-in-out forwards;
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  background: linear-gradient(90deg, #5a67d8, #48bfe3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  border-left: 5px solid var(--secondary-color);
+  padding-left: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: var(--secondary-color);
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 25px;
+  line-height: 1.5;
+}
+
+ul li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.skills-list li strong {
+  color: var(--secondary-color);
+}
+
+.cv-section:hover {
+  background: #f9fbff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+/* ----------------------------- */
+/* FOOTER */
+/* ----------------------------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(120deg, #5a67d8, #48bfe3);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+/* ----------------------------- */
+/* LINKS INSIDE SECTIONS */
+/* ----------------------------- */
+.cv-section a {
+  color: var(--secondary-color);
+}
+
+.cv-section a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE */
+/* ----------------------------- */
+@media (max-width: 768px) {
+  .cv-container {
+    width: 95%;
+  }
+
+  .personal-info h1 {
+    font-size: 1.5em;
+  }
+
+  .cv-section {
+    padding: 20px;
+  }
+}
+
