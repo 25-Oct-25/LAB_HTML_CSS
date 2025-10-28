@@ -1,4 +1,4 @@
-/* 🌍 General Page Style */
+/*  General Page Style */
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: #f9f9f9;
@@ -7,7 +7,7 @@ body {
   line-height: 1.6;
 }
 
-/* 🏷️ Main Title */
+/*  Main Title */
 h1 {
   text-align: center;
   color: #2c3e50;
@@ -21,7 +21,7 @@ p:first-of-type {
 }
 
 
-/* 🗺️ Section Titles */
+/* Section Titles */
 h2, h3 {
   color: #004d66;
   margin-top: 40px;
@@ -32,7 +32,7 @@ h2 {
   padding-left: 8px;
 }
 
-/* 🖼️ Images & Videos */
+/*  Images & Videos */
 img, video {
   display: block;
   margin: 15px auto;
@@ -42,14 +42,14 @@ img, video {
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
-/* 🧾 Paragraphs */
+/*  Paragraphs */
 p {
   font-size: 16px;
   text-align: justify;
   
 }
 
-/* 📋 Table */
+/*  Table */
 table {
   border-collapse: collapse;
   width: 80%;
@@ -68,7 +68,7 @@ th {
   color: white;
 }
 
-/* 🔗 Links */
+/*  Links */
 a {
   color: #004d66;
   text-decoration: none;
@@ -79,7 +79,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 💌 Contact Form */
+/*  Contact Form */
 form {
   background-color: #ffffff;
   padding: 20px;
@@ -110,7 +110,7 @@ input[type="submit"]:hover {
   background-color: #539aa6;
 }
 
-/* ⚓ Footer */
+/*  Footer */
 footer {
   text-align: center;
   margin-top: 40px;
