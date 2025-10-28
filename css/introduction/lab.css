@@ -1,0 +1,179 @@
+/* ========== Reset  ========== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* ========== General basics ========== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f8fc;    
+  color: #222;
+  line-height: 1.65;
+}
+
+/* ========== links ========== */
+a {
+  color: #004aad;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0,74,173,.35);
+}
+a:hover { border-bottom-style: solid; }
+
+/* ========== header ========== */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #102746, #1b63d8);
+  color: #fff;
+  padding: 28px 16px 22px;
+  border-bottom: 4px solid #023476;
+}
+header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(26px, 3.5vw, 36px);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: .3px;
+}
+header img { vertical-align: middle; }
+header p { margin: 6px auto 0; max-width: 780px; color: #d4d7e0; }
+header hr { display: none; } 
+
+/* ========== Titles and texts ========== */
+h2 {
+  color: #004aad;
+  font-size: clamp(20px, 2.6vw, 26px);
+  border-left: 4px solid #004aad;  
+  padding-left: 10px;   
+  margin: 4px 0 12px;
+}
+p { margin: 0 0 10px; }
+
+/* ========== Containers (sections and articles) ========== */
+section, article {
+  background: #fff;
+  border: 1px solid #e8eef9;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  padding: 18px 18px;
+  width: min(1000px, 92%);
+  margin: 18px auto;
+}
+
+/* ========== lists ========== */
+ul { margin: 8px 0 0 18px; }
+li { margin: 6px 0; }
+
+/* ========== Pictures and comments on them ========== */
+img { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,.15);}
+figure { margin: 12px 0; text-align: center; }
+figure img {
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid #e8eef9;
+}
+figcaption { color: #667; font-size: 13px; margin-top: 6px; }
+
+/* ========== table ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;  
+  background: #fff;
+  border: 1px solid #e8eef9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef3fc;
+  text-align: center;
+}
+th {
+  background: #eef4ff;
+  color: #0f2f72;
+  font-weight: 700;
+}
+tr:last-child td { border-bottom: none; }
+
+/* ========== form ========== */
+form {
+  max-width: 680px;       
+  margin: 12px auto 0;
+  background: #ffffff;
+  border: 1px solid #b2b5ba;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(46, 45, 45, 0.05);
+}
+label { font-weight: 600; color: #0f2f72; }
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea,
+button[type="submit"] { margin-top: 6px; }
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfd9f3;
+  border-radius: 8px;
+  background: #fbfdff;
+  outline: none;
+  transition: box-shadow .2s, border-color .2s;
+}
+textarea { resize: vertical; min-height: 110px; }
+input:focus, select:focus, textarea:focus {
+  border-color: #004aad;
+  box-shadow: 0 0 0 3px rgba(31,122,255,.15);
+}
+
+/*==== Send button ======*/
+button[type="submit"] {
+  display: inline-block;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #13488d;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,74,173,.22);
+  transition: filter .2s, transform .08s;
+}
+button[type="submit"]:hover { filter: brightness(1.09); }
+button[type="submit"]:active { transform: translateY(1px); }
+
+/* Simple hint for incorrect input */
+input:required:invalid, select:required:invalid { border-color: #110e0e; }
+
+/* ==========  mark ========== */
+mark {
+  background: #0851ef7c;
+  padding: 0 .2em;
+  border-radius: 4px;
+}
+
+/* ========== footer ========== */
+footer {
+  text-align: center;
+  color: #667;
+  font-size: 14px;
+  padding: 18px 10px 28px;
+}
+footer hr {
+  width: min(900px, 92%);
+  border: none;
+  border-top: 1px solid #e8eef9;
+  margin: 0 auto 10px;
+}
+
+/* ========== Simple response ========== */
+@media (max-width: 640px) {
+  section, article { padding: 14px; }
+  form { padding: 14px; }
+}

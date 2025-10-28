@@ -1,0 +1,117 @@
+:root{
+  /* Monochrome palette */
+  --bg:#f6f6f7; --paper:#ffffff; --ink:#111; --muted:#5f5f5f;
+  --line:#e3e3e3; --chip:#f1f1f1; --shadow:0 8px 28px rgba(0,0,0,.12);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Segoe UI", Tahoma, sans-serif; line-height:1.55;
+}
+
+/* Topbar (screen only) */
+.topbar{
+  max-width:900px; margin:14px auto 0; padding:0 12px;
+  display:flex; justify-content:flex-end;
+}
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid var(--line); background:#fff; color:var(--ink);
+  padding:8px 12px; border-radius:10px; font-weight:600; cursor:pointer;
+  transition:all .18s ease;
+}
+.btn .icon{ width:18px; height:18px; fill:var(--ink) }
+.btn:hover{ transform:translateY(-1px); box-shadow:0 4px 14px rgba(0,0,0,.08) }
+
+/* A4 page container (screen preview) */
+.page{
+  width:min(900px, 94%);
+  margin:14px auto 28px;
+  background:var(--paper);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  padding:24px 26px 20px;
+}
+
+/* Header */
+.hero{
+  text-align:center; border-bottom:1.6px solid var(--line);
+  padding-bottom:10px; margin-bottom:14px;
+}
+.name{ margin:0; font-size:2.1rem; letter-spacing:.2px }
+.role{ margin:6px 0 8px; color:#333 }
+.contact{ margin:0; font-size:.98rem }
+.contact a{ color:#000; text-decoration:none; font-weight:600 }
+.contact a:hover{ text-decoration:underline }
+.ci{ display:inline-flex; align-items:center; gap:6px }
+.sep{ margin:0 8px; color:#9a9a9a }
+.icon{ width:18px; height:18px; fill:#222 }
+.icon.dot{ width:6px; height:6px; fill:#9a9a9a }
+
+/* Sections */
+.sec{
+  margin:12px 0; padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+}
+.sec.last{ border-bottom:none }
+h2{
+  margin:0 0 8px; font-size:1.04rem; font-weight:800; color:#222;
+  border-left:4px solid #000; padding-left:10px;
+}
+.muted{ color:var(--muted) }
+.right{ float:right; color:#333 }
+
+/* Lists */
+.list{ list-style:none; padding:0; margin:0 }
+.list li{ margin:6px 0 }
+.list.tight li{ margin:4px 0 }
+
+/* Timeline (dates inside, no overflow) */
+.timeline{ list-style:none; margin:0; padding:0; border-left:2px solid var(--line) }
+.row{
+  display:grid; grid-template-columns: 140px 1fr; column-gap:16px;
+  padding:10px 0;
+}
+.when{
+  justify-self:start; align-self:start;
+  font-weight:700; color:#666; background:#f4f4f4; border:1px solid var(--line);
+  border-radius:999px; padding:4px 10px; width:max-content; font-size:.94rem;
+}
+.what{
+  border:1px solid var(--line); border-radius:10px; padding:10px 12px; background:#fff;
+  transition:box-shadow .18s ease, transform .18s ease;
+}
+.what:hover{ box-shadow:0 3px 12px rgba(0,0,0,.08); transform:translateY(-1px) }
+.bullets{ list-style:disc; padding-left:18px; margin:6px 0 0 }
+.bullets li{ margin:4px 0 }
+
+/* Skills */
+.tags{
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:2px
+}
+.tags span{
+  background:var(--chip); border:1px solid var(--line);
+  padding:6px 12px; border-radius:999px; font-weight:600;
+  font-size:.94rem; color:#222; transition:all .15s ease;
+}
+.tags span:hover{ background:#ebebeb; transform:translateY(-1px) }
+
+/* Print  */
+@media print {
+  @page { size: A4; margin: 12mm; }
+  body{ background:#fff; -webkit-print-color-adjust:exact; print-color-adjust:exact }
+  .topbar{ display:none }
+  .page{ width:auto; margin:0; box-shadow:none; border-radius:0; padding:0 }
+  .name{ font-size:18pt }
+  .role{ font-size:11pt }
+  .contact{ font-size:10.5pt }
+  h2{ font-size:11pt; padding-left:8px; border-left-width:3px }
+  p, li, .tags span { font-size:10.5pt; line-height:1.35 }
+  .row{ grid-template-columns: 112px 1fr; column-gap:10px; padding:6px 0 }
+  .when{ font-size:9.5pt; padding:2px 7px }
+  .what{ padding:6px 8px }
+}
+
+/* Helpers */
+.hidden{ position:absolute; left:-9999px }
