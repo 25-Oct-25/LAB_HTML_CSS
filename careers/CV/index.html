@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lama Saud Alharbi | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Lama Saud Alharbi</h1>
+    <p class="subtitle">Computer Science Graduate | Technical Support </p>
+    <p class="motto">Passionate about technology and continuous learning.</p>
+
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am deeply passionate about the field of technology and continuously strive to stay updated 
+      with the latest innovations and advancements.  
+      I hold a Bachelor's degree in Computer Science from 
+      Princess Nourah Bint Abdulrahman University with a GPA of 4.15/5 (Very Good).  
+      <br><br>
+      I have experience in technical support, with strong skills in 
+      data entry, system analysis, and office programs.  
+      I am known for my responsibility, problem-solving skills, and commitment to completing my work 
+      efficiently and with high quality.
+    </p>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Computer & Office Programs</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Time Management</div>
+      <div class="skill">Leadership</div>
+      <div class="skill">Teamwork</div>
+      <div class="skill">Communication Skills</div>
+      <div class="skill">Analytical Thinking</div>
+      <div class="skill">System Analysis</div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATES SECTION ===== -->
+  <section id="certificates" class="section">
+    <h2>Certificates</h2>
+    <ul class="certificates-list">
+      <li>Web Application Development - D.A.M United for I. Technology</li>
+      <li>Oracle Application Developer Track - Ministry of Communication and Information Technology</li>
+    </ul>
+  </section>
+
+  <!-- ===== GRADUATION PROJECT SECTION ===== -->
+  <section id="project" class="section">
+    <h2>Graduation Project</h2>
+    <div class="project-card">
+      <img src="img/grad.png" alt="Smart Vision for the Blind Logo" class="project-image">
+      <h3>Vision for the Blind</h3>
+      <p>
+        One of my greatest achievements was my graduation project, 
+        <strong>"Vision for the Blind"</strong>, an intelligent assistive system designed to help visually impaired individuals 
+        recognize the people around them.  
+        <br><br>
+        The system uses a <strong>Reinforcement Learning method</strong> to capture and analyze images of people standing in front of the user, 
+        identify them, and then provide <strong>audio feedback announcing their names</strong>.  
+        <br><br>
+        Later, the project was enhanced into a <strong>portable device</strong> that allows blind users to recognize people in real time — 
+        making it a practical and innovative solution that improves accessibility and independence.
+      </p>
+      <p class="project-note">Smart Assistive System for the Visually Impaired — Graduation Project, 2020</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <ul class="contact-info">
+      <li>Email: <a href="mailto:leema442@gmail.com">leema442@gmail.com</a></li>
+      <li>Phone: <a href="tel:+966508220759">0508220759</a></li>
+      <li>Location: Saudi Arabia</li>
+      <li>GitHub: <a href="https://github.com/lamaS10" target="_blank">github.com/lamaS10</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/lama-alharbi-372bb920a" target="_blank">linkedin.com/in/lama-alharbi</a></li>
+    </ul>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Lama Saud Alharbi - Mini Project 4.</p>
+  </footer>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button id="backToTop" title="Back to top">↑</button>
+
+  <script>
+    const btn = document.getElementById("backToTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+    btn.onclick = function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  </script>
+
+</body>
+</html>
