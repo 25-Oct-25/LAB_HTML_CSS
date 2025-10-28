@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project one</title>
+    <link rel="stylesheet" href="../../css/introduction/index.css">
 </head>
 <body>
-    <div>
+    <div id="intro">
         <h1>introduction to HTML</h1>
         <p>
             HTML is a markup language consisting of a series of elements used 
@@ -14,40 +15,42 @@
             cause it to behave in a certain way.
         </p>
     </div>
-    <br> 
-    <hr>
-    <div>
-        <h3>the difference in structure between HTML4 & HTML5:</h3>
-        <img src="../../img/difference.jpg">
+     
+    <div id="card">
+        <h3>the difference in structure between HTML4 & HTML5</h3>
+        <div id="html4"><img src="../../img/html4.png"></div>
+        <div id="html5"><img src="../../img/html5.png"></div>
     </div>
-    <br>
-    <hr>
-    <div>
-        <h3>there are two types of tags in HTML:</h3>
+    
+    <div id="tags">
+        <h3>there are two types of tags in HTML</h3>
         <ol>
             <li><b>empty tags:</b>
                 <p>Empty tags, also known as self-closing tags, do not have any content
                 between an opening and closing tag because they do not enclose any text or other elements.</p>
-                <ul>&lt;img&gt;: Used to embed images.</ul>
-                <ul>&lt;br&gt; : Inserts a line break.</ul>
-                <ul>&lt;hr&gt; : Represents a thematic break (horizontal rule).</ul>
-                <ul>&lt;input&gt;: Represents an input field in forms.</ul>
+                <ul>
+                    <li>&lt;img&gt;: Used to embed images.</li>
+                    <li>&lt;br&gt; : Inserts a line break.</li>
+                    <li>&lt;hr&gt; : Represents a thematic break (horizontal rule).</li>
+                    <li>&lt;input&gt;: Represents an input field in forms.</li>
+                </ul>
             </li>
             <br>
             <li><b>container tags:</b>
                 <p>Container tags enclose content, which can include text,
                 other HTML elements, or both. They consist of an opening tag and a corresponding closing tag.</p>
-                <ul>&lt;div&gt;: A generic container for block-level elements.</ul>
-                <ul>&lt;p&gt;: Represents a paragraph of text.</ul>
-                <ul>&lt;h1&gt;: to &lt;h6&gt;:: Header tags for different levels of headings.</ul>
-                <ul>&lt;a&gt;: Represents a hyperlink.</ul>
+                <ul>
+                    <li>&lt;div&gt;: A generic container for block-level elements.</li>
+                    <li>&lt;p&gt;: Represents a paragraph of text.</li>
+                    <li>&lt;h1&gt; to &lt;h6&gt;: Header tags for different levels of headings.</li>
+                    <li>&lt;a&gt;: Represents a hyperlink.</li>
+                </ul>
             </li>
         </ol>
     </div>
-    <br>
-    <hr>
-    <div>
-        <h3>there are two types of element:</h3>
+
+    <div id="ele">
+        <h3>there are two types of element</h3>
         <table>
             <tr>
                 <th>type</th>
@@ -71,11 +74,10 @@
             </tr>
         </table>
     </div>
-    <br>
-    <hr>
-    <div>
+
+    <div id="link">
         <h3>
-            Links to some useful resources:
+            Links to some useful resources
         </h3>
         <ol>
             <li>
@@ -86,11 +88,10 @@
             </li>
         </ol>
     </div>
-    <br>
-    <hr>
-    <div>
+
+    <div id="exer">
         <h3>
-            Exercise:
+            Exercise
         </h3>
         <form>
             <label for="q1">Q1: HTML stand for what?</label><br>
