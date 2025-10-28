@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Maha Saud" />
+  <meta name="description" content="Mini Project — Article webpage about the AI Revolution." />
+  <title>AI Revolution — Article</title>
+  <style>
+    /* ===== Design tokens ===== */
+    :root{
+      --bg: #f8fafc;
+      --surface:#ffffff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --brand:#5b6bff;   /* primary blue */
+      --brand-2:#7c3aed; /* accent purple */
+      --border:#e5e7eb;
+      --ring:#c7d2fe;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{ --bg:#0b1020; --surface:#121733; --ink:#e6e8f3; --muted:#b7c0d9; --brand:#7aa2ff; --brand-2:#9d7aff; --border:#243055; --ring:#334155; --shadow: 0 16px 40px rgba(0,0,0,.35); }
+    }
+
+    /* ===== Base ===== */
+    *{ box-sizing:border-box }
+    html{ scroll-behavior:smooth }
+    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.7; background:var(--bg); color:var(--ink) }
+    .container{ max-width: 1000px; margin:0 auto; padding: 0 20px }
+    img{ max-width:100%; height:auto; display:block; border-radius:14px }
+    :focus-visible{ outline: 3px solid var(--ring); outline-offset: 2px }
+
+    /* ===== Ambient background (subtle) ===== */
+    .ambient{ position:fixed; inset:0; pointer-events:none; z-index:-1 }
+    .ambient::before, .ambient::after{ content:""; position:absolute; filter: blur(60px); opacity:.14 }
+    .ambient::before{ left:10%; top:8%; width:520px; height:320px; background: radial-gradient(500px 280px at 20% 10%, var(--brand), transparent 60%) }
+    .ambient::after{ right:8%; top:0; width:560px; height:360px; background: radial-gradient(600px 320px at 80% 0%, var(--brand-2), transparent 60%) }
+
+    /* ===== Header / Nav ===== */
+    header{ position:sticky; top:0; z-index:20; backdrop-filter: saturate(1.05) blur(8px); background: color-mix(in oklab, var(--bg) 88%, transparent); border-bottom:1px solid var(--border) }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0 }
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px }
+    .logo{ width:28px; height:28px; border-radius:8px; background: conic-gradient(from 210deg, var(--brand), var(--brand-2), var(--brand)); box-shadow:0 8px 22px color-mix(in oklab, var(--brand) 40%, black) }
+    .nav ul{ list-style:none; display:flex; gap:16px; margin:0; padding:0 }
+    .nav a{ text-decoration:none; color:inherit; font-weight:600; opacity:.9 }
+    .nav a:hover{ opacity:1; text-decoration:underline; text-underline-offset:4px }
+
+    /* ===== Hero ===== */
+    .hero{ margin: 26px 0 10px; border-radius:18px; border:1px solid var(--border); background:linear-gradient(180deg, color-mix(in oklab, var(--brand) 8%, var(--surface)), var(--surface)); box-shadow:var(--shadow); overflow:hidden }
+    .hero-wrap{ display:grid; grid-template-columns:1.2fr .8fr; gap:24px; padding:26px 18px }
+    h1{ font-size: clamp(28px, 4.2vw, 44px); line-height:1.15; margin: 6px 0 8px }
+    .lede{ color:var(--muted); max-width: 62ch }
+    .cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--surface); font-weight:700; text-decoration:none; color:inherit; box-shadow: var(--shadow); transition: transform .15s ease }
+    .btn:hover{ transform: translateY(-1px) }
+    .btn.primary{ background:linear-gradient(180deg, var(--brand), var(--brand-2)); color:white; border:none }
+
+    figure{ margin:0; position:relative }
+
+    /* ===== Content / Sidebar ===== */
+    article{ display:grid; grid-template-columns: 3fr 1.05fr; gap:24px; margin: 24px 0 }
+    .prose{ background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:22px; box-shadow:var(--shadow) }
+    .prose h2{ color: color-mix(in oklab, var(--brand) 65%, var(--ink)); margin:.2rem 0 .4rem }
+    #conclusion h2 { color: color-mix(in oklab, var(--brand) 65%, var(--ink)); }
+    .muted{ color:var(--muted) }
+    .callout{ border-left:4px solid var(--brand); background: color-mix(in oklab, var(--brand) 10%, var(--surface)); padding:10px 14px; border-radius:8px }
+
+    aside{ position:sticky; top:82px; height:max-content; display:grid; gap:12px }
+    .card{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:14px; box-shadow:var(--shadow) }
+    .card h3{ margin:.2rem 0 .6rem }
+
+    .divider{ height:1px; background:linear-gradient(90deg, transparent, var(--border), transparent); margin: 18px 0 }
+
+    /* ===== Subtle reveal on scroll (respects reduced motion) ===== */
+    .reveal{ opacity:0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease }
+    .reveal.in{ opacity:1; transform:none }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 980px){ .hero-wrap{ grid-template-columns:1fr } article{ grid-template-columns:1fr } }
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> <span>AI Revolution</span></div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#what">What</a></li>
+          <li><a href="#why">Why Now</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#ethics">Ethics</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero reveal" aria-label="Hero">
+      <div class="hero-wrap">
+        <div>
+          <h1>The AI Revolution</h1>
+          <p class="lede">A concise article about how AI moved from research labs to everyday tools</p>
+          <div class="cta">
+            <a class="btn primary" href="#what">Start Reading</a>
+            <a class="btn" href="#video">Watch Video</a>
+          </div>
+        </div>
+        <figure>
+          <!-- AI image -->
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=80" alt="Artificial Intelligence abstract illustration" loading="lazy"/>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Content + Sidebar -->
+    <article>
+      <div class="prose">
+        <section id="what" class="reveal" aria-labelledby="what-title">
+          <h2 id="what-title">What is the “AI Revolution”?</h2>
+          <p>The AI Revolution means that artificial intelligence has moved from research labs into everyday life. Thanks to machine learning—especially deep learning and large language models—AI can now understand language, create content, and support decision-making.</p>
+          <div class="callout"><strong>In short:</strong> AI is becoming <em>core infrastructure</em> for knowledge work and industry.</div>
+        </section>
+
+        <section id="why" class="reveal" aria-labelledby="why-title">
+          <h2 id="why-title">Why Now?</h2>
+          <p>This rapid growth is possible because of three main factors:</p>
+          <ul>
+            <li><strong>Powerful hardware & cloud services</strong> that make training large models faster.</li>
+            <li><strong>Massive datasets & open-source tools</strong> that broaden access and experimentation.</li>
+            <li><strong>New model designs</strong> (e.g., transformers) that boost accuracy and flexibility.</li>
+          </ul>
+        </section>
+
+        <section id="impact" class="reveal" aria-labelledby="impact-title">
+          <h2 id="impact-title">Where AI Helps</h2>
+          <ul>
+            <li><strong>Productivity:</strong> tools for writing, coding, and automation.</li>
+            <li><strong>Healthcare:</strong> support for triage and medical imaging.</li>
+            <li><strong>Education:</strong> personalized feedback and practice.</li>
+            <li><strong>Creativity:</strong> concept art, drafts, and new ideas.</li>
+          </ul>
+        </section>
+
+        <section id="ethics" class="reveal" aria-labelledby="ethics-title">
+          <h2 id="ethics-title">Ethics & Safety</h2>
+          <ul>
+            <li><strong>Privacy:</strong> limit sensitive data and protect access.</li>
+            <li><strong>Fairness:</strong> audit for bias and include diverse data.</li>
+            <li><strong>Safety:</strong> align behavior with human values and monitor misuse.</li>
+          </ul>
+        </section>
+
+        <!-- Short Video -->
+        <section id="video" class="reveal" aria-labelledby="video-title">
+          <h2 id="video-title">Short Video</h2>
+          <div class="card" style="padding:0; overflow:hidden; border-radius:12px">
+            <iframe width="100%" height="420" src="ثورة الذكاء الاصطناعي، كيف بدأت، وأين وصلت؟.mp4" title="AI Explainer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion" class="reveal" aria-labelledby="conclusion-title">
+          <h2 id="conclusion-title">Conclusion</h2>
+          <p>The AI Revolution is changing how we work, learn, and create. It offers real gains in speed and quality, but it also introduces risks that require careful design and governance. The path forward is not “more AI at any cost,” but <em>better</em> AI: systems that are transparent, reliable, and respectful of people’s rights.</p>
+          <p class="callout"><strong>Bottom line:</strong> If we balance innovation with responsibility, AI will serve as a trustworthy partner—amplifying human skill, widening access to knowledge, and helping solve complex problems across industry and society.</p>
+        </section>
+      </div>
+
+      <aside aria-label="Sidebar">
+        <div class="card">
+          <h3>On this page</h3>
+          <ol style="margin:0; padding-left:18px; color:var(--muted)">
+            <li><a href="#what">What</a></li>
+            <li><a href="#why">Why Now</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#ethics">Ethics</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>About</h3>
+          <p class="muted">Author: <strong>Maha Saud</strong>. Mini project with semantic HTML and concise CSS.</p>
+        </div>
+      </aside>
+    </article>
+
+    <div class="divider"></div>
+    <footer class="container" style="margin: 16px 0 26px; color:var(--muted)">© 2025 • AI Revolution — Article by Maha Saud.</footer>
+  </main>
+
+  <script>
+    // Reveal animation (progressive; disabled if user prefers reduced motion)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!prefersReduced){
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+      },{ threshold: .12 });
+      els.forEach(el=> io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el=> el.classList.add('in'));
+    }
+  </script>
+</body>
+</html>
