@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Book Antiqua";
+}
+
+body {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.6;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.hero:hover {
+  transform: translateY(-5px);
+}
+
+.hero-right img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.hero-right img:hover {
+  transform: scale(1.05);
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: "Papyrus";
+  font-size: 3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.short-intro {
+  font-size: 1.1rem;
+  color: #6e6e73;
+  max-width: 500px;
+}
+
+video {
+  display: block;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+a {
+  text-decoration: none;
+  color: #0071e3;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #005bb5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+th {
+  background-color: #f9f9fb;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+
+td ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+td ul li {
+  margin: 0.3rem 0;
+}
+
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+form p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+label {
+  margin-left: 0.3rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #0071e3;
+  margin-top: 0.5rem;
+}
+
+input[type="submit"] {
+  display: block;
+  margin-top: 1.5rem;
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #005bb5;
+}

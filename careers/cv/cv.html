@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norah Arrubayea</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        </nav>
+    </header>
+
+
+    <main id="home" class="hero">
+        <div class="hero-left">
+            <p class="greeting">Welcome, I’m</p>
+            <h1 class="name">Norah Arrubayea</h1>
+            <p class="role">Full Stack Web Developer</p>
+            <p class="short-intro">
+                Fresh Computer Science graduate passionate about building responsive websites and learning new
+                technologies.
+            </p>
+            <div class="buttons">
+                <a href="https://github.com/Nowasr02" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/norah-waleed-/" class="icon-btn" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+    </main>
+
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+
+            <div class="skills-nav">
+                <button class="tab-btn active" data-tab="technical">Technical Skills</button>
+                <button class="tab-btn" data-tab="soft">Soft Skills</button>
+            </div>
+
+            <div class="skills-content">
+
+                <div class="tab-content active" id="technical">
+                    <div class="skills-grid">
+                        <div class="skill-item"><span>HTML</span></div>
+                        <div class="skill-item"></i><span>CSS</span></div>
+                        <div class="skill-item"><span>JavaScript (Basics)</span></div>
+                        <div class="skill-item"><span>SQL</span></div>
+                        <div class="skill-item"><span>ASP.NET Framework</span></div>
+                        <div class="skill-item"><span>GitHub Pages</span></div>
+                        <div class="skill-item"><span>GitHub </span></div>
+                        <div class="skill-item"><span>VS code</span></div>
+                        <div class="skill-item"><span>SQL Server (SSMS)</span></div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="soft">
+                    <div class="skills-grid">
+                        <div class="skill-item"><span>Teamwork and Collaboration</span></div>
+                        <div class="skill-item"><span>Communication</span></div>
+                        <div class="skill-item"><span>Problem Solving</span></div>
+                        <div class="skill-item"><span>Time Management</span></div>
+                        <div class="skill-item"><span>ِAdaptability</span></div>
+                        <div class="skill-item"><span>Fast Learning</span></div>
+                        <div class="skill-item"><span>Creativity</span></div>
+                        <div class="skill-item"><span>Documentation</span></div>
+                        <div class="skill-item"><span>Critical Thinking</span></div>
+                        <div class="skill-item"><span>Attention To Detail</span></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="project-cards">
+
+            <div class="project-card">
+                <h3>Text-based RPG game</h3>
+                <p>Developed an interactive menu-driven game using Python, where the player will choose action from
+                    menues to perform and increase their level to defeat the last boss of the game and win the game!
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>BookSpace - COOP project</h3>
+                <p>A web platform mainly focused on backend, allowing users to view shedueled events, register for them,
+                    and provide ratings.</p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>SQL</span>
+                    <span>ASP.NET framework</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Bookspace - Personal Project</h3>
+                <p>Developed the user interface of the platform independently, focusing smooth user experience.</p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Visionmate - Graduation Project</h3>
+                <p>A mobile Application designed to assist visually impaired individuals by leveraging real-time object
+                    detection, text recognition using ML Kit Vision, and detecting colors.</p>
+                <div class="tags">
+                    <span>Kotlin</span>
+                    <span>Android Framework</span>
+                    <span>ML Kit Vision</span>
+                    <span>Fiber base</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>If you prefer, you can also reach me directly via email:</p>
+                <p class="email">norahwasr@gmail.com</p>
+            </div>
+
+            <div class="contact-form">
+                <h3>Get in touch</h3>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="bbfc9a44-08a9-4afa-9f09-45d176f9701d">
+                    <input type="text" name="name" placeholder="Your Name" class="contact-input" required />
+                    <input type="email" name="email" placeholder="Your Email" class="contact-input" required />
+                    <textarea name="message" placeholder="Your Message" rows="5" class="contact-input"
+                        required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+    <!--for Skills Navbar-->
+    <script>
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+
+                tabBtns.forEach(b => b.classList.remove("active"));
+                tabContents.forEach(c => c.classList.remove("active"));
+
+                btn.classList.add("active");
+                document.getElementById(btn.dataset.tab).classList.add("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
