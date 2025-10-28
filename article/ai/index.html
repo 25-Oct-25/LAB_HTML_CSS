@@ -9,9 +9,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="icon" href="/article/ai/imgs/robot-solid.svg" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="/article/ai/imgs/robot-solid.svg"
+      type="image/x-icon"
+    />
     <style>
-      html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
   <body>
@@ -40,8 +46,11 @@
       <div class="hero-content">
         <p class="typewriter">"The Future Isn’t Coming — It’s Here."</p>
         <button id="audio-toggle">🔊</button>
-        <audio id="hero-audio" loop>
-          <source src="/article/ai/audio/tech-ambient.mp3" type="audio/mpeg" />
+        <audio id="hero-audio" autoplay>
+          <source
+            src="/article/ai/audio/keyboard-typing-sound.mp3"
+            type="audio/mpeg"
+          />
           Your browser does not support the audio element.
         </audio>
       </div>
@@ -54,7 +63,15 @@
         <div class="ai-revolution">
           <div class="card">
             <p class="intro-text">
-              Artificial intelligence (AI) is a branch of computer science that creates systems to perform tasks that typically require human intelligence, such as learning, reasoning, and problem-solving. These systems are powered by algorithms, often using techniques like machine learning and deep learning, to analyze data, make predictions, and improve their performance over time without being explicitly programmed for every scenario. Everyday examples include voice assistants, search engine suggestions, and self-driving cars. 
+              Artificial intelligence (AI) is a branch of computer science that
+              creates systems to perform tasks that typically require human
+              intelligence, such as learning, reasoning, and problem-solving.
+              These systems are powered by algorithms, often using techniques
+              like machine learning and deep learning, to analyze data, make
+              predictions, and improve their performance over time without being
+              explicitly programmed for every scenario. Everyday examples
+              include voice assistants, search engine suggestions, and
+              self-driving cars.
             </p>
           </div>
         </div>
@@ -77,7 +94,9 @@
             <p>AI processes massive data to reveal patterns and predictions.</p>
           </div>
           <div class="card">
-            <div class="neon-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <div class="neon-icon">
+              <i class="fa-solid fa-puzzle-piece"></i>
+            </div>
             <h3>Innovation</h3>
             <p>It’s reshaping industries and inspiring new technologies.</p>
           </div>
@@ -90,7 +109,8 @@
       <div class="container">
         <h2>AI Revolution</h2>
         <p class="intro-text">
-          AI is transforming every aspect of life, from healthcare to art, making the impossible possible.
+          AI is transforming every aspect of life, from healthcare to art,
+          making the impossible possible.
         </p>
       </div>
     </section>
@@ -100,32 +120,50 @@
       <div class="card">
         <div class="neon-icon"><i class="fas fa-heartbeat"></i></div>
         <h3>Healthcare</h3>
-        <p>AI accelerates diagnosis, improves treatment plans, and predicts outcomes to save lives.</p>
+        <p>
+          AI accelerates diagnosis, improves treatment plans, and predicts
+          outcomes to save lives.
+        </p>
       </div>
       <div class="card">
         <div class="neon-icon"><i class="fas fa-robot"></i></div>
         <h3>Automation</h3>
-        <p>Smart automation optimizes industries, from manufacturing to logistics, with precision and speed.</p>
+        <p>
+          Smart automation optimizes industries, from manufacturing to
+          logistics, with precision and speed.
+        </p>
       </div>
       <div class="card">
         <div class="neon-icon"><i class="fas fa-paint-brush"></i></div>
         <h3>Creativity</h3>
-        <p>AI is co-creating art, music, and literature, unlocking human imagination like never before.</p>
+        <p>
+          AI is co-creating art, music, and literature, unlocking human
+          imagination like never before.
+        </p>
       </div>
       <div class="card">
         <div class="neon-icon"><i class="fas fa-book-open"></i></div>
         <h3>Education</h3>
-        <p>AI personalizes learning, analyzes student performance, and creates adaptive learning paths to help everyone reach their potential.</p>
+        <p>
+          AI personalizes learning, analyzes student performance, and creates
+          adaptive learning paths to help everyone reach their potential.
+        </p>
       </div>
       <div class="card">
         <div class="neon-icon"><i class="fas fa-leaf"></i></div>
         <h3>Environment</h3>
-        <p>AI monitors climate patterns, predicts natural disasters, and optimizes resource usage for a greener, sustainable future.</p>
+        <p>
+          AI monitors climate patterns, predicts natural disasters, and
+          optimizes resource usage for a greener, sustainable future.
+        </p>
       </div>
       <div class="card">
         <div class="neon-icon"><i class="fas fa-space-shuttle"></i></div>
         <h3>Transportation</h3>
-        <p>AI improves traffic management, enables autonomous vehicles, and enhances public transportation efficiency worldwide.</p>
+        <p>
+          AI improves traffic management, enables autonomous vehicles, and
+          enhances public transportation efficiency worldwide.
+        </p>
       </div>
     </section>
 
@@ -136,7 +174,13 @@
         <div class="ai-revolution">
           <div class="card">
             <p class="intro-text">
-              Artificial Intelligence has come a long way since its inception. From early rule-based systems to deep learning and generative models, AI now powers virtual assistants, personalized recommendations, healthcare, autonomous vehicles, and creative works. Future AI promises seamless integration into daily life, enhancing productivity, creativity, and decision-making, while raising ethical and governance challenges.
+              Artificial Intelligence has come a long way since its inception.
+              From early rule-based systems to deep learning and generative
+              models, AI now powers virtual assistants, personalized
+              recommendations, healthcare, autonomous vehicles, and creative
+              works. Future AI promises seamless integration into daily life,
+              enhancing productivity, creativity, and decision-making, while
+              raising ethical and governance challenges.
             </p>
           </div>
         </div>
@@ -144,10 +188,7 @@
     </section>
 
     <footer>
-      <p>
-        Rawan AlSalem
-        &copy; 2025 AI Revolution
-      </p>
+      <p>Rawan AlSalem &copy; 2025 AI Revolution</p>
     </footer>
 
     <script>
@@ -170,17 +211,25 @@
       });
 
       const sliders = document.querySelectorAll(".cards-slider");
-      sliders.forEach(sliderEl => {
-        let isDown = false, startX, scrollLeft;
-        sliderEl.addEventListener("mousedown", e => {
+      sliders.forEach((sliderEl) => {
+        let isDown = false,
+          startX,
+          scrollLeft;
+        sliderEl.addEventListener("mousedown", (e) => {
           isDown = true;
           sliderEl.classList.add("active");
           startX = e.pageX - sliderEl.offsetLeft;
           scrollLeft = sliderEl.scrollLeft;
         });
-        sliderEl.addEventListener("mouseleave", () => { isDown = false; sliderEl.classList.remove("active"); });
-        sliderEl.addEventListener("mouseup", () => { isDown = false; sliderEl.classList.remove("active"); });
-        sliderEl.addEventListener("mousemove", e => {
+        sliderEl.addEventListener("mouseleave", () => {
+          isDown = false;
+          sliderEl.classList.remove("active");
+        });
+        sliderEl.addEventListener("mouseup", () => {
+          isDown = false;
+          sliderEl.classList.remove("active");
+        });
+        sliderEl.addEventListener("mousemove", (e) => {
           if (!isDown) return;
           e.preventDefault();
           const x = e.pageX - sliderEl.offsetLeft;
