@@ -1,3 +1,6 @@
+/* Path: styles.css */
+
+/* Basic Settings and Fonts */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,122 +8,250 @@
 }
 
 body {
-    font-family: 'Tajawal', sans-serif;
-    background-color: #f8f9fa;
-    color: #343a40;
-    line-height: 1.7;
+    font-family: 'Roboto', sans-serif; /* Changed font */
+    background: linear-gradient(120deg, #74ebd5, #ACB6E5); /* 🔹 تدرج لوني للخلفية */
+    -webkit-background-clip: border-box; /* 🔹 تطبيق التدرج ضمن حدود العنصر */
+    background-clip: border-box;
+    color: #333;
+    line-height: 1.8;
     padding-top: 60px;
+    text-align: left; /* Changed to left-align for English content */
 }
+
+/* Header & Nav */
 header {
-    background-color: #007bff; 
+    background-color: #2c3e50; /* Darker header */
     padding: 15px 30px;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0; /* Changed from right to left for LTR */
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex; /* Using flexbox for navigation */
+    justify-content: flex-start; /* Aligns nav links to the start (left) */
+    align-items: center;
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-right: 25px; /* Changed margin-left to margin-right */
     font-weight: 700;
     transition: color 0.3s ease-in-out; 
 }
-
 .nav-link:hover {
-    color: #ffc107; 
+    color: #8be9fd; /* Lighter color on hover */
 }
 
+/* Main Article Layout */
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
-    display: block;
 }
 
 .ai-article {
     background-color: white;
     padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative; /* Essential for robot's absolute positioning */
+    overflow: hidden; /* To keep the robot within article bounds */
+}
+
+/* Article Headings & Meta */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+h1::before {
+    content: "🚀 "; 
+    margin-right: 10px; /* Changed margin-left to margin-right for LTR */
+}
+h2, h3 {
+    color: #3498db; /* Blue for subheadings */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-left: 10px solid #3498db; /* Left border for LTR */
+    padding-left: 10px;
+}
+.meta-data {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+
+/* Article Images */
+.article-cover-image {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.ai-article h1::before {
-    content: "💡 ";
-    color: #007bff;
-    margin-left: 10px;
+.inline-image {
+    width: 200px; /* **تحديد العرض لضمان الظهور** */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+.float-left {
+    float: left; 
+    margin-right: 20px;
+    margin-left: 0;
 }
 
-.related-topics {
-    background-color: #e9ecef;
+.float-right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+.content-section p {
+    margin-bottom: 20px;
+    /* **هذه القاعدة تحل مشكلة عدم احتواء الصورة** */
+    overflow: auto; 
+    clear: both; 
+}
+
+/* Related Articles Aside */
+.related-articles {
+    background-color: #ecf0f1;
     padding: 20px;
-    border-radius: 6px;
-    margin-top: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
 }
-
-.related-topics li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #ced4da;
-    background-color: #e9ecef; 
+.related-articles h3 {
+    color: #2c3e50;
+    border-left: none; /* Removed border */
+    text-align: center;
 }
-
-.related-topics li:nth-child(even) {
-    background-color: #dee2e6; 
+.related-articles ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
 }
-
-.related-topics li:last-child {
+.related-articles li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #bdc3c7;
+    text-align: left; /* Changed to left-align */
+}
+.related-articles li:last-child {
     border-bottom: none;
 }
+.related-articles a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.related-articles a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
 
-.ai-term {
-    background-color: #28a745;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #34495e; /* Darker footer */
     color: white;
-    padding: 2px 6px;
-    border-radius: 3px;
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.9em;
 }
 
-.ai-term:hover {
-    transform: scale(1.1); 
-    box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
-}
-
-.video-placeholder {
-    height: 300px;
-    background-color: #343a40;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    margin: 20px 0;
-    font-size: 1.5rem;
-}
-
-@media (min-width: 768px) {
+/* ------------------------------------ */
+/* Robot Companion (Animations) */
+/* ------------------------------------ */
+.robot-companion {
+    position: fixed; /* تغيير من absolute إلى fixed ليتحرك مع النافذة */
+    width: 80px;
+    height: 80px;
+    z-index: 10;
     
+    /* تحديد موقع الروبوت المبدئي: على يمين الشاشة بعيداً عن النص */
+    right: 50px; 
+    top: 100px;
+    
+    /* استخدام اسم الحركة الجديد: 'vertical-move' */
+    animation: vertical-move 10s ease-in-out infinite alternate; 
+}
+
+.robot-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes vertical-move {
+    /* 0%: نقطة البداية (أعلى قليلاً) */
+    0% {
+        transform: translateY(0) rotate(0deg); 
+        /* تحديد الموقع الأفقي والثابت */
+        right: 50px; 
+        top: 100px;
+    }
+    
+    /* 100%: نقطة النهاية (أسفل) */
+    100% {
+        /* الروبوت يتحرك عمودياً مسافة 600 بكسل إلى الأسفل */
+        transform: translateY(600px) rotate(5deg);
+        /* الموقع الأفقي يبقى ثابتاً */
+        right: 50px; 
+        top: 100px;
+    }
+}
+
+/* ------------------------------------ */
+/* Responsive Design (Media Queries) */
+/* ------------------------------------ */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px;
+    }
+    header {
+        padding: 10px 15px;
+        justify-content: center; /* Center nav links on small screens */
+    }
+    .nav-link {
+        margin: 0 10px; /* Adjust spacing */
+        font-size: 0.9em;
+    }
     main {
-        display: flex;
-        flex-direction: row; 
-        justify-content: space-between;
-        gap: 30px;
+        padding: 0 10px;
     }
-    
     .ai-article {
-        flex: 3;
-        margin-top: 0;
+        padding: 20px;
     }
-
-    .related-topics {
-        flex: 1; 
-        margin-top: 0;
+    h1 {
+        font-size: 1.8em;
     }
-
-    .video-placeholder {
-        height: 400px;
+    h2, h3 {
+        font-size: 1.4em;
+    }
+    .inline-image {
+        width: 100%; /* Make inline images full width on small screens */
+        float: none; /* Remove float */
+        display: block;
+        margin: 15px 0; /* Center images */
+    }
+    .robot-companion {
+        width: 60px; /* Smaller robot on small screens */
+        height: 60px;
+        animation-duration: 20s; /* Adjust animation speed */
+    }
+    /* Simplified robot path for smaller screens */
+    @keyframes robot-path {
+        0% { top: 30px; left: 10px; }
+        25% { top: 30px; left: calc(100% - 70px); }
+        50% { top: 300px; left: calc(100% - 70px); }
+        75% { top: 300px; left: 10px; }
+        100% { top: 30px; left: 10px; }
     }
 }
