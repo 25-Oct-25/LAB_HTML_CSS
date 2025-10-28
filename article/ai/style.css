@@ -1,0 +1,315 @@
+html {
+    background-color: #000000; /* Deep dark background */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Good practice for layout */
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    color: white;
+    letter-spacing: 1px; /* Slightly wider spacing for modern look */
+}
+
+p {
+    font-family: "Annie Use Your Telescope", cursive; /* Keeping this for unique touch */
+    color: #e0e0e0; /* Softer white for paragraph text */
+    line-height: 1.8;
+}
+
+.continer {
+    max-width: 1200px; /* Constrain content width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+/* === Hero Page === */
+.page-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 70vh;
+    padding: 50px 0;
+}
+
+.page-1 img {
+    width: 25vw; /* Slightly larger robot for impact */
+    max-width: 400px; /* Cap max size */
+    margin-left: -140px;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(50, 20, 100, 0.3), rgba(20, 50, 100, 0.3)); /* Darker, more muted gradient */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 100, 255, 0.2); /* Lighter, blue-ish border */
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(100, 100, 255, 0.4); /* Stronger, blue glow */
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-right: 50px; Space between text and image */
+}
+
+.hero-section h1 {
+    font-size: 3.8vw;
+    margin-bottom: 25px;
+    color: #836bff; /* Purple highlight */
+    text-shadow: 0 0 8px rgba(131, 107, 255, 0.7);
+}
+
+.hero-section p {
+    font-size: 1.6vw;
+    line-height: 1.7;
+    color: #c0c0e0;
+}
+
+.ai-text{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+/* === AI Companies Section === */
+.ai-companes {
+    text-align: center;
+    padding: 80px 0;
+    margin-top: 50px;
+    background-color: #1a1a2e; /* Slightly different dark background */
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+}
+
+.ai-companes h1 {
+    font-size: 3.5vw;
+    margin-bottom: 15px;
+    color: #836bff; /* Purple highlight */
+    text-shadow: 0 0 8px rgba(131, 107, 255, 0.7);
+}
+
+.ai-companes p {
+    font-size: 1.3vw;
+    margin-bottom: 40px;
+    color: #b0b0d0;
+}
+
+.ai-companes img {
+    width: 9vw;
+    max-width: 120px; /* Max size for logos */
+    margin: 0 20px;
+    opacity: 0.8; /* Slightly subdued */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.ai-companes img:hover {
+    transform: scale(1.15);
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* === About Section === */
+.about-section {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.about-section > h1 {
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.about-section > h1 span {
+    color: #836bff; /* Purple highlight */
+    text-shadow: 0 0 8px rgba(131, 107, 255, 0.7);
+    font-family: "Caprasimo", serif;
+}
+
+/* General styling for all sub-sections */
+.about-one, .about-two, .about-three {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(135deg, rgba(30, 30, 60, 0.5), rgba(40, 40, 80, 0.5)); /* Darker, subtle gradient */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(100, 100, 255, 0.3) inset; /* Deeper shadow with inner glow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-one:hover, .about-two:hover, .about-three:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(100, 100, 255, 0.5) inset;
+}
+
+.about-one h1, .about-two h1, .about-three h1 {
+    font-size: 2.8vw;
+    margin-bottom: 20px;
+    flex: 1.2;
+    color: #b0e0e6; /* Light blue */
+    text-shadow: 0 0 5px rgba(176, 224, 230, 0.5);
+}
+
+.about-one p, .about-two p, .about-three p {
+    font-size: 1.4vw;
+    line-height: 1.7;
+    flex: 2;
+    color: #d0d0f0;
+}
+
+.about-one img, .about-two img, .about-three img {
+    width: 15vw;
+    max-width: 200px;
+}
+
+.about-one h1 span, .about-two h1 span, .about-three h1 span {
+    font-family: "Caprasimo", serif;
+    color: #836bff; /* Purple highlight */
+    text-shadow: 0 0 8px rgba(131, 107, 255, 0.7);
+}
+
+.about-two {
+    flex-direction: row-reverse;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 80px;
+    background-color: #1a1a2e; /* Consistent dark background */
+    border-top: 1px solid rgba(100, 100, 255, 0.2);
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+}
+
+footer hr {
+    display: none; /* Remove default hr as we're using border-top */
+}
+
+footer p {
+    font-size: 1.1vw;
+    color: #8080a0; /* Muted color for footer text */
+}
+
+footer b {
+    color: #a0a0ff; /* Light blue for emphasis */
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+    /* .page-1 {
+        flex-direction: column;
+        text-align: center;
+    } */
+
+    .page-1 img {
+        width: 25vw;
+        /* margin-top: 40px; */
+    }
+
+    .hero-section {
+        /* width: 90%; */
+        padding: 30px;
+        margin-right: 0;
+    }
+
+    .hero-section h1 {
+        font-size: 5vw;
+    }
+
+    .hero-section p {
+        font-size: 2.5vw;
+    }
+
+    .ai-companes img {
+        width: 18vw;
+        margin: 0 10px;
+    }
+
+    .about-one, .about-two, .about-three {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .about-one h1, .about-two h1, .about-three h1 {
+        font-size: 4.5vw;
+    }
+
+    .about-one p, .about-two p, .about-three p {
+        font-size: 3vw;
+    }
+
+    .about-one img, .about-two img, .about-three img {
+        width: 40vw;
+    }
+
+    footer p {
+        font-size: 4.5vw;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .continer {
+        padding: 10px;
+    }
+
+    .page-1 img{
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .hero-section h1 {
+        font-size: 7vw;
+    }
+
+    .hero-section p {
+        font-size: 4vw;
+    }
+
+    .ai-companes h1 {
+        font-size: 6vw;
+    }
+    
+    .ai-companes p {
+        font-size: 3.5vw;
+    }
+
+    .ai-companes img {
+        width: 25vw;
+        margin: 0 5px;
+    }
+
+    .about-section > h1 {
+        font-size: 7vw;
+    }
+
+    .about-one h1, .about-two h1, .about-three h1 {
+        font-size: 5.5vw;
+    }
+
+    .about-one p, .about-two p, .about-three p {
+        font-size: 4vw;
+    }
+
+    .about-one img, .about-two img, .about-three img {
+        width: 50vw;
+    }
+
+    footer p {
+        font-size: 2.5vw;
+    }
+}
