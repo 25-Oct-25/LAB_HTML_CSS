@@ -1,0 +1,120 @@
+/*  General Page Style */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 40px;
+  line-height: 1.6;
+}
+
+/*  Main Title */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2em;
+  border-bottom: 3px solid #bcd9ea;
+  padding-bottom: 10px;
+ 
+}
+p:first-of-type {
+  text-align: center;
+}
+
+
+/* Section Titles */
+h2, h3 {
+  color: #004d66;
+  margin-top: 40px;
+}
+
+h2 {
+  border-left: 5px solid #6cb6c8;
+  padding-left: 8px;
+}
+
+/*  Images & Videos */
+img, video {
+  display: block;
+  margin: 15px auto;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/*  Paragraphs */
+p {
+  font-size: 16px;
+  text-align: justify;
+  
+}
+
+/*  Table */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #6cb6c8;
+  color: white;
+}
+
+/*  Links */
+a {
+  color: #004d66;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #008c9e;
+  text-decoration: underline;
+}
+
+/*  Contact Form */
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 90%;
+  margin-bottom: 12px;
+  padding: 10px 15px ;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #6cb6c8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #539aa6;
+}
+
+/*  Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 14px;
+
+}

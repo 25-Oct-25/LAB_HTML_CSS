@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Revolution Articles</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!-- 🌙 DARK MOOD BUTTON-->
+  <button id="theme-toggle" class="floating-toggle">🌙</button>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <h1>🤖 The AI Revolution</h1>
+      <p class="subtitle">Exploring how Artificial Intelligence is transforming our world.</p>
+      <nav aria-label="Main navigation">
+        <ul class="nav-menu">
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#articles">Articles</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>Welcome to the Age of Intelligence</h2>
+      <p>Discover the innovation, challenges, and future of AI technology.</p>
+      <a href="#articles" class="btn">Explore Articles</a>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <section id="intro" class="intro-section">
+      <h2>💡 What is Artificial Intelligence?</h2>
+      <p>
+        Artificial Intelligence (AI) refers to systems that mimic human intelligence
+        to perform tasks such as learning, reasoning, and problem-solving.
+        It's rapidly changing industries and reshaping human creativity.
+      </p>
+
+      <!-- VIDEO -->
+      <video controls width="100%" poster="img/ai1.jpeg">
+        <source src="vid/ai_intro.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- ARTICLES SECTION -->
+    <section id="articles" class="articles-section">
+      <h2>Featured Articles</h2>
+      <div class="articles-grid">
+
+        <article class="card">
+          <img src="img/ai1.jpeg" alt="AI research" />
+          <div class="card-content">
+            <h3>Northwestern — The AI Revolution</h3>
+            <p>A deep look at how AI is transforming industries and influencing global policies.</p>
+            <a href="https://www.ipr.northwestern.edu/news/2025/the-ai-revolution.html" target="_blank" rel="noopener noreferrer" class="btn">Continue Reading →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ai2.jpeg" alt="AI evolution chart" />
+          <div class="card-content">
+            <h3>Wait But Why — The AI Revolution</h3>
+            <p>A fascinating long-form article explaining intelligence levels and the singularity concept.</p>
+            <a href="https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html" target="_blank" rel="noopener noreferrer" class="btn">Continue Reading →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ai3.jpeg" alt="AI development timeline" />
+          <div class="card-content">
+            <h3>Medium — The AI Revolution Two Years In</h3>
+            <p>Reflecting on AI's growth, challenges, and how it has reshaped our society in two short years.</p>
+            <a href="https://medium.com/@todasco/the-ai-revolution-two-years-in-3e3ff79f38d6" target="_blank" rel="noopener noreferrer" class="btn">Continue Reading →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="img/ai4.jpeg" alt="AI reshaping world" />
+          <div class="card-content">
+            <h3>TIME — How AI Will Reshape the World</h3>
+            <p>TIME explores how AI will redefine work, ethics, and global economics in the next decade.</p>
+            <a href="https://time.com/6310115/ai-revolution-reshape-the-world/" target="_blank" rel="noopener noreferrer" class="btn">Continue Reading →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <aside id="resources" class="resources">
+      <h2>Learning Resources</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="noopener noreferrer">MDN: Semantic HTML</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries" target="_blank" rel="noopener noreferrer">MDN: Responsive Design</a></li>
+        <li><a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer">TailwindCSS Docs</a></li>
+        <li><a href="https://webaim.org/intro/" target="_blank" rel="noopener noreferrer">WebAIM Accessibility</a></li>
+      </ul>
+    </aside>
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 AI Revolution | Mini Project 3</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      toggleBtn.textContent = body.classList.contains("dark-mode")
+        ? "☀️"
+        : "🌙";
+    });
+  </script>
+
+</body>
+</html>
