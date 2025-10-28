@@ -216,3 +216,28 @@ footer {
   background-color: #0284c7;
   transform: translateY(-3px);
 }
+/*  EXPERIENCE  */
+.experience-card {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.experience-card h3 {
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.experience-card .date {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+
+
+
