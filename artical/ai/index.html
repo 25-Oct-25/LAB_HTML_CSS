@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Revolution — Pulse Grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Rajdhani:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --accent: #06b6d4;
+            --ink: #e6f9ff;
+            --muted: #8aa3ad;
+            --bg: #07090d;
+            --card: rgba(255, 255, 255, .06);
+            --ring: 1px solid rgba(6, 182, 212, .35);
+            --radius: 14px;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:
+                radial-gradient(1200px 800px at 15% 10%, rgba(6, 182, 212, .12), transparent 50%),
+                radial-gradient(800px 600px at 85% 20%, rgba(6, 182, 212, .08), transparent 60%),
+                var(--bg);
+            color: var(--ink);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin-inline: auto;
+            padding-inline: 20px
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            backdrop-filter: blur(6px);
+            background: rgba(0, 0, 0, .8);
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+        }
+
+        .nav a {
+            color: var(--ink);
+            text-decoration: none
+        }
+
+        .nav a:hover {
+            color: var(--accent)
+        }
+
+        .halo {
+            position: fixed;
+            inset: -20vmax;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 25% 25%, rgba(6, 182, 212, .07), transparent 40%),
+                radial-gradient(circle at 75% 35%, rgba(6, 182, 212, .05), transparent 45%);
+            animation: drift 28s linear infinite;
+            mask: linear-gradient(#000, transparent 70%);
+        }
+
+        @keyframes drift {
+            to {
+                transform: translate3d(-4%, 2%, 0) rotate(1deg)
+            }
+        }
+
+        .title {
+            font-family: Rajdhani, Inter, sans-serif;
+            font-weight: 700;
+            line-height: .95;
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            background: linear-gradient(120deg, #e6f9ff 0%, #9be7f2 20%, var(--accent) 40%, #8df3ff 60%, #e6f9ff 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% 100%;
+            animation: shine 9s linear infinite;
+            letter-spacing: .5px;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% 0%
+            }
+        }
+
+        .subtitle {
+            color: var(--muted);
+            max-width: 52ch
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        .card {
+            background: var(--card);
+            border: var(--ring);
+            border-radius: var(--radius);
+            padding: 22px;
+            transition: transform .35s ease, box-shadow .35s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+            position: relative;
+            overflow: clip;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 18px 50px rgba(6, 182, 212, .25)
+        }
+
+        .kicker {
+            color: var(--accent);
+            letter-spacing: .08em;
+            font-weight: 600;
+            font-size: .78rem;
+            text-transform: uppercase
+        }
+
+        .h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-top: 6px
+        }
+
+        .lead {
+            color: var(--muted);
+            margin-top: .5rem;
+            line-height: 1.6
+        }
+
+        .hero-split {
+            display: grid;
+            gap: 28px;
+            align-items: center
+        }
+
+        @media(min-width:900px) {
+            .hero-split {
+                grid-template-columns: 1.15fr .85fr
+            }
+        }
+
+        .portrait {
+            justify-self: end;
+            width: min(420px, 38vw);
+            height: 520px;
+            border-radius: 22px;
+            overflow: hidden;
+            border: var(--ring);
+            box-shadow: 0 20px 60px rgba(6, 182, 212, .2);
+            animation: fadeUp 900ms ease-out both, floatUpDown 2s ease-in-out infinite alternate;
+            transition: transform .5s ease, box-shadow .5s ease;
+        }
+
+        .portrait:hover {
+            transform: translateY(-14px) scale(1.02);
+            box-shadow: 0 25px 80px rgba(6, 182, 212, .35)
+        }
+
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: saturate(1.05) contrast(1.05) brightness(.98);
+            transition: transform .6s ease, filter .6s ease;
+            animation: kenburns 8s ease-in-out infinite alternate;
+        }
+
+        .portrait:hover img {
+            transform: scale(1.07);
+            filter: saturate(1.25) contrast(1.1) brightness(1.05)
+        }
+
+        @keyframes floatUpDown {
+            0% {
+                transform: translateY(0)
+            }
+
+            100% {
+                transform: translateY(-35px)
+            }
+        }
+
+        @keyframes kenburns {
+            0% {
+                transform: scale(1) translate(0, 0)
+            }
+
+            100% {
+                transform: scale(1.08) translate(-2%, -3%)
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .footer {
+            text-align: center;
+            color: #8aa3ad;
+            font-size: .85rem;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 60px;
+            background: rgba(255, 255, 255, 0.02)
+        }
+
+        @media(max-width:900px) {
+            .container {
+                padding-inline: 16px
+            }
+
+            .hero-split {
+                grid-template-columns: 1fr !important;
+                gap: 22px
+            }
+
+            .portrait {
+                justify-self: center;
+                width: min(92vw, 420px);
+                height: 58vh;
+                max-height: 560px
+            }
+
+            .title {
+                font-size: 2.2rem
+            }
+
+            .subtitle {
+                max-width: 44ch;
+                font-size: 1rem
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr !important
+            }
+
+            .pillnav {
+                display: none
+            }
+        }
+
+        @media(max-width:600px) {
+            .portrait {
+                height: 50vh;
+                border-radius: 16px
+            }
+
+            .card {
+                padding: 18px
+            }
+
+            .h3 {
+                font-size: 1.25rem
+            }
+
+            .lead {
+                font-size: .98rem
+            }
+        }
+
+        .pillnav a[aria-current="page"] {
+            background: rgba(6, 182, 212, .12);
+            border: 1px solid rgba(6, 182, 212, .45);
+            border-radius: 999px
+        }
+
+        .kicker::before {
+            content: "›";
+            margin-right: .4rem;
+            color: var(--accent);
+            font-weight: 700
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 1rem;
+            background: #fff;
+            color: #000;
+            padding: .5rem .75rem;
+            border-radius: .5rem;
+            z-index: 50;
+        }
+
+        .skip-link:focus-visible {
+            left: 1rem;
+            outline: 3px solid var(--accent)
+        }
+
+        .nav a:focus-visible,
+        .pillnav a:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 8px
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            * {
+                animation: none !important;
+                transition: none !important
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="halo" aria-hidden="true"></div>
+    <header class="nav">
+        <div class="container flex items-center justify-between py-4">
+            <a href="#" class="flex items-center gap-2 no-underline">
+                <span class="text-xl font-extrabold tracking-wide" style="color:var(--ink)">AI</span>
+                <span class="text-xl font-extrabold tracking-wide" style="color:var(--accent)">Revolution</span>
+            </a>
+            <nav aria-label="Primary">
+                <ul class="pillnav hidden md:flex items-center gap-2 text-sm">
+                    <li><a href="#what" class="block">What</a></li>
+                    <li><a href="#impact" class="block">Impact</a></li>
+                    <li><a href="#explore" class="block" aria-current="page">Explore</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="container">
+        <section class="swim" style="position:relative;padding-block:56px">
+            <div class="hero-split">
+                <div class="text-left">
+                    <h1 class="title">The AI Revolution</h1>
+                    <p class="subtitle mt-4">AI is a global shift where intelligent systems augment human capability
+                        across science, business, and creativity. It blends data, models, and compute to turn patterns
+                        into decisions and ideas into products.</p>
+                </div>
+                <figure class="portrait">
+                    <img src="ChatGPT Image Oct 28, 2025, 10_40_59 AM.png" alt="Abstract vertical AI composition"
+                        width="420" height="520">
+                </figure>
+            </div>
+        </section>
+        <section id="what" class="grid grid-2">
+            <article class="card">
+                <p class="kicker">What</p>
+                <h3 class="h3">What is AI Revolution?</h3>
+                <p class="lead mt-2">The AI Revolution is when machine learning and generative models move from research
+                    into everyday tools, transforming industries and daily life.</p>
+            </article>
+            <article class="card">
+                <p class="kicker">How</p>
+                <h3 class="h3">How it Works</h3>
+                <p class="lead mt-2">AI systems use data to learn, recognize patterns, and create outputs, connecting
+                    models to apps, workflows, and decision-making.</p>
+            </article>
+        </section>
+        <section id="impact" class="mt-8 grid grid-3">
+            <article class="card">
+                <p class="kicker">Impact</p>
+                <h3 class="h3">Healthcare</h3>
+                <p class="lead mt-2">Faster diagnostics, deeper insights, and smarter tools help doctors make better
+                    decisions while keeping human oversight.</p>
+            </article>
+            <article class="card">
+                <p class="kicker">Impact</p>
+                <h3 class="h3">Economy</h3>
+                <p class="lead mt-2">Productivity, automation, and new AI roles reshape how businesses operate and how
+                    people learn and adapt.</p>
+            </article>
+            <article class="card">
+                <p class="kicker">Impact</p>
+                <h3 class="h3">Creativity</h3>
+                <p class="lead mt-2">From writing to design, AI acts as a co-creator that speeds up inspiration and
+                    expands creative boundaries.</p>
+            </article>
+        </section>
+        <section id="explore" class="grid grid-2" style="margin-top:3rem;">
+            <article class="card">
+                <p class="kicker">Ethics</p>
+                <h3 class="h3">Responsible AI</h3>
+                <p class="lead">Balancing innovation with fairness, privacy, and transparency ensures that technology
+                    remains safe and inclusive.</p>
+            </article>
+            <article class="card">
+                <p class="kicker">Future</p>
+                <h3 class="h3">The Next Wave</h3>
+                <p class="lead">Multimodal and personalized AI will become a natural part of how we live, learn, and
+                    connect.</p>
+            </article>
+            <article class="card">
+                <p class="kicker">Talent</p>
+                <h3 class="h3">New Skills</h3>
+                <p class="lead">The future workforce will focus on data quality, prompt design, and governance of
+                    intelligent systems.</p>
+            </article>
+            <article class="card">
+                <p class="kicker">Adoption</p>
+                <h3 class="h3">Scaling AI</h3>
+                <p class="lead">Businesses should start small, measure results, and scale responsibly with
+                    human-centered policies.</p>
+            </article>
+        </section>
+        <aside class="card" style="margin-top:1.5rem;">
+            <p class="kicker">Note</p>
+            <p class="lead">Responsible AI needs clear policies, evaluation, and human oversight to stay safe and
+                useful.</p>
+        </aside>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 AI Revolution.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

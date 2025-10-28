@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziyad's Personal Bio Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #F0F5F9, #E6EFF5);
+            color: #222;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: #222222;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-left img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid white;
+            object-fit: cover;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            background-color: #333333;
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #BBBBBB;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #222222;
+            /* Primary Black */
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+            text-align: center;
+            word-spacing: 1px;
+        }
+
+        img {
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+            border: 3px solid #222222;
+        }
+
+        ul,
+        ol {
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #F8F9F9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #222222;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222222;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #333333;
+        }
+
+        form {
+            width: 70%;
+            margin: 30px auto;
+            background-color: #F8F9F9;
+            padding: 25px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px solid #ddd;
+        }
+
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="reset"],
+        input[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"] {
+            background-color: #222222;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #ccc;
+            color: black;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #333333;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #aaa;
+        }
+
+        footer {
+            background-color: #222222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .flex-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .box {
+            width: 150px;
+            height: 80px;
+            background-color: #222222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            background-color: #333333;
+        }
+
+        .Profile {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img src="WhatsApp Image 2025-10-26 at 7.41.19 PM.jpeg" alt="Ziyad's Photo">
+            <div class="logo">Ziyad</div>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+
+
+        </ul>
+
+    </nav>
+
+    <div class="content">
+
+        <h1>Welcome to My Personal Bio Page</h1>
+        <p>
+            Hello! My name is <b>Ziyad Saad Al-Zahrani</b>.
+            I am a <b>Computer Science graduate</b> passionate about technology, software development, and
+            continuous learning.
+        </p>
+
+
+        <hr>
+
+        <h2>About Me</h2>
+        <p>
+            I graduated with a degree in Computer Science and have experience in software development and
+            continuous improvement.
+            I enjoy building creative projects and learning new technologies every day.
+        </p>
+        <p>
+            Here's a famous quote I like:
+            <i>"Believe you can and you're halfway there."</i>
+        </p>
+
+
+        <hr>
+
+        <h2>Visit my professional profiles:</h2>
+
+        <ul class="Profile">
+            <li class="link"><a href="https://github.com/Zdreq72" target="_blank">GitHub</a></li>
+            <li class="link"><a href="https://www.linkedin.com/in/ziyad-alzharni/" target="_blank">LinkedIn</a>
+            </li>
+        </ul>
+
+
+        <hr>
+
+        <h2>My Hobbies</h2>
+        <ul>
+            <li>Playing Football</li>
+            <li>Coding Projects</li>
+            <li>Photography</li>
+            <li>Going Gym</li>
+
+        </ul>
+
+        <h3>Goals List</h3>
+        <ol>
+            <li>Keep learning new programming languages</li>
+            <li>Build real-world applications</li>
+            <li>Contribute to open-source projects</li>
+        </ol>
+
+        <h3>Education Table</h3>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>University</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Bachelor of Computer Science</td>
+                <td>Jubail Industrial College</td>
+                <td>2025</td>
+            </tr>
+        </table>
+
+        <div class="flex-gallery">
+            <div class="box">HTML</div>
+            <div class="box">CSS</div>
+            <div class="box">Python</div>
+            <div class="box">SharePoint</div>
+
+        </div>
+
+
+        <hr>
+
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, please fill out this simple form:</p>
+
+        <form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ziyad Al-Zahrani — Curriculum Vitae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bg: #0b0d10;
+            --card: #12161b;
+            --ink: #e7eaee;
+            --muted: #94a3b8;
+            --line: #263041;
+            --accent: #4c93ff;
+            --accent-2: #6b8bff;
+            --radius: 14px;
+            --shadow: 0 12px 30px rgba(0, 0, 0, .25);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial;
+            background: radial-gradient(900px 600px at 80% -10%, rgba(124, 148, 255, .06), transparent 60%), var(--bg);
+            color: var(--ink);
+        }
+
+        .container {
+            max-width: 1060px;
+            margin-inline: auto;
+            padding: 28px 20px
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(6px);
+            background: rgba(11, 13, 16, .7);
+            border-bottom: 1px solid var(--line);
+            z-index: 30;
+            padding: 14px 20px
+        }
+
+        .brand {
+            font-weight: 800;
+            letter-spacing: .3px
+        }
+
+        #mode {
+            position: absolute;
+            left: -9999px
+        }
+
+        .toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 6px 10px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--ink);
+            user-select: none
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--muted);
+            transition: transform .3s ease
+        }
+
+        #mode:checked+.site .toggle .dot {
+            transform: translateX(12px);
+            background: #0b0d10
+        }
+
+        .site {
+            transition: color .2s ease, background .2s ease
+        }
+
+        #mode:checked~.site {
+            --bg: #f7f8fb;
+            --card: #ffffff;
+            --ink: #0f172a;
+            --muted: #475569;
+            --line: #e5e7eb;
+            --accent: #335dff;
+            --accent-2: #6b8bff;
+            background: var(--bg);
+            color: var(--ink)
+        }
+
+        .hero {
+            display: grid;
+            gap: 26px;
+            align-items: center;
+            padding: 32px 0
+        }
+
+        @media(min-width:900px) {
+            .hero {
+                grid-template-columns: 1.2fr .8fr
+            }
+        }
+
+        .h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1;
+            font-weight: 800;
+            background: linear-gradient(120deg, var(--ink) 0%, var(--accent-2) 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 220% 100%;
+            animation: shine 10s linear infinite
+        }
+
+        .subtitle {
+            color: var(--muted);
+            max-width: 60ch;
+            margin-top: 10px
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: .95rem;
+            align-items: center
+        }
+
+        .contact-links i {
+            color: var(--accent);
+            margin-right: 6px
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 22px;
+            transition: transform .35s ease, box-shadow .35s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 50px rgba(0, 0, 0, .22)
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr)
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        .section-title {
+            font-weight: 800;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 6px;
+            margin-bottom: 18px;
+        }
+
+        .sub-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 0;
+            color: var(--accent)
+        }
+
+        .lead {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-top: 8px
+        }
+
+        .portrait {
+            justify-self: end;
+            width: min(420px, 38vw);
+            height: 520px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: 0 18px 60px rgba(0, 0, 0, .25);
+            transition: transform .4s ease, box-shadow .4s ease;
+            min-height: 300px;
+        }
+
+        .portrait:hover {
+            transform: translateY(-12px) scale(1.015);
+            box-shadow: 0 28px 90px rgba(0, 0, 0, .30)
+        }
+
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1.02)
+        }
+
+        .action-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: .7rem 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--accent);
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background .25s ease, transform .2s ease, box-shadow .25s ease
+        }
+
+        .btn i {
+            margin-right: 0
+        }
+
+        .btn:hover {
+            background: color-mix(in oklab, var(--accent) 14%, transparent);
+            transform: translateY(-2px)
+        }
+
+        .btn:active {
+            transform: translateY(0)
+        }
+
+        .badge {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 14px
+        }
+
+        .tag {
+            padding: .42rem .7rem;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
+            font-size: .9rem;
+            transition: background .25s ease, color .25s ease, border-color .25s ease
+        }
+
+        .tag:hover {
+            color: var(--ink);
+            border-color: var(--accent);
+            background: color-mix(in oklab, var(--accent) 12%, transparent)
+        }
+
+        .cv-item {
+            margin-bottom: 24px;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent)
+        }
+
+        .cv-item:last-child {
+            margin-bottom: 0
+        }
+
+        .i-title {
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 4px;
+            font-size: 1.1rem
+        }
+
+        .i-sub {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 1rem;
+            margin-top: 0
+        }
+
+        .i-meta {
+            color: var(--muted);
+            font-size: .9rem;
+            margin-top: 4px
+        }
+
+        .cv-item ul {
+            padding-left: 20px;
+            margin-top: 10px;
+            list-style: disc;
+            color: var(--muted)
+        }
+
+        .cv-item ul li {
+            margin-bottom: 5px;
+            line-height: 1.6
+        }
+
+        .cv-item ul li::marker {
+            color: var(--accent)
+        }
+
+        .tools-badge {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: color-mix(in oklab, var(--accent) 5%, transparent);
+            border-radius: var(--radius);
+            border: 1px solid var(--line);
+            font-size: 0.9rem;
+        }
+
+        .tools-badge span {
+            color: var(--ink);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tools-badge i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px 20px;
+        }
+
+        .skill-list li {
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+            font-size: .95rem;
+        }
+
+        .skill-list li i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            margin: 50px 0;
+            color: var(--muted);
+            font-size: .9rem;
+            text-align: center
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% 0
+            }
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 22px
+            }
+
+            .portrait {
+                justify-self: center;
+                width: min(92vw, 420px);
+                height: 58vh;
+                max-height: 560px
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr
+            }
+
+            .skill-list {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input id="mode" type="checkbox">
+    <div class="site">
+        <header class="header">
+            <div class="brand">Ziyad Al-Zahrani • CV</div>
+            <label class="toggle" for="mode">
+                <span>Light</span><span class="dot"></span><span>Dark</span>
+            </label>
+        </header>
+
+        <main class="container">
+            <section class="hero">
+                <div>
+                    <h1 class="h1">Ziyad Saad Al-Zahrani</h1>
+                    <p class="subtitle">Computer Science graduate with training in the Continuous Improvement
+                        Department, bringing hands-on expertise in SharePoint web development, and process optimization.
+                        I hold strong competencies in programming and problem-solving, with the ability to create
+                        user-friendly solutions that enhance efficiency and support organizational goals.</p>
+
+                    <div class="contact-links">
+                        <a href="tel:+966535778335" style="color:inherit;text-decoration:none;"><i
+                                class="fa-solid fa-phone"></i> +966 535 778 335</a>
+                        <a href="mailto:zsyz8335@gmail.com" style="color:inherit;text-decoration:none;"><i
+                                class="fa-solid fa-envelope"></i> zsyz8335@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/ziyad-alzharni/" target="_blank" rel="noopener"
+                            style="color:inherit;text-decoration:none;"><i class="fa-brands fa-linkedin"></i> Ziyad
+                            Al-Zahrani</a>
+                        <span style="color:inherit;"><i class="fa-solid fa-location-dot"></i> Saudi Arabia</span>
+                    </div>
+
+                    <div class="action-links">
+                        <a class="btn bg-blue-600 hover:bg-blue-700 text-white border-0"
+                            href="https://www.linkedin.com/in/ziyad-alzharni/" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                        <a class="btn bg-gray-800 hover:bg-gray-900 text-white border-0"
+                            href="https://github.com/Zdreq72" target="_blank" rel="noopener"><i
+                                class="fa-brands fa-github"></i> GitHub</a>
+                        <a class="btn" href="mailto:zsyz8335@gmail.com"><i class="fa-solid fa-paper-plane"></i>
+                            Email</a>
+                    </div>
+
+                    <div class="badge">
+                        <span class="tag">Python</span>
+                        <span class="tag">SharePoint</span>
+                        <span class="tag">Full-Stack</span>
+                        <span class="tag">AI/Deep Learning</span>
+                    </div>
+                </div>
+                <figure class="portrait">
+                    <img src="WhatsApp Image 2025-10-26 at 7.41.19 PM.jpeg" alt="Ziyad portrait">
+                </figure>
+            </section>
+
+            <section class="grid grid-3" style="margin-top:22px">
+                <article class="card">
+                    <div class="sub-title">Summary</div>
+                    <p class="lead">Hands-on experience in building SharePoint portals, managing permissions, creating
+                        tracking systems, and converting manual work into automated workflows to reduce errors and
+                        improve efficiency.</p>
+                </article>
+                <article class="card">
+                    <div class="sub-title">Top Hard Skills</div>
+                    <div class="badge">
+                        <span class="tag"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="tag"><i class="fa-brands fa-microsoft"></i> SharePoint Admin</span>
+                        <span class="tag"><i class="fa-solid fa-database"></i> SQL</span>
+                        <span class="tag"><i class="fa-brands fa-js"></i> Web Dev (JS)</span>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="sub-title">Top Soft Skills</div>
+                    <div class="badge">
+                        <span class="tag">Communication</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Analytical Thinking</span>
+                        <span class="tag">Teamwork</span>
+                    </div>
+                </article>
+            </section>
+
+            <section style="margin-top:40px">
+                <div class="section-title">Professional Experience</div>
+
+                <div class="cv-item">
+                    <p class="i-title">Trainee - Continuous Improvement Department</p>
+                    <p class="i-sub">Saudi Kayan Petrochemical Company | Saudi Arabia</p>
+                    <div class="i-meta">January 2025 — September 2025</div>
+                    <ul>
+                        <li>Worked on SK Portal as an administrator, supporting its daily operations and user
+                            management.</li>
+                        <li>In charge of maintaining the organization's portal environment to support daily and annual
+                            operations.</li>
+                        <li>Configured SK sites, designed pages, and managed permissions based on department needs.</li>
+                        <li>Built Tracking Systems on Saudi Kayan Portal to monitor and manage different departmental
+                            needs.</li>
+                        <li>Converted manual work into automated workflows, improving efficiency and reducing errors.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section style="margin-top:40px">
+                <div class="section-title">Education</div>
+
+                <div class="cv-item">
+                    <p class="i-title">Bachelor of Science in Computer Science</p>
+                    <p class="i-sub">Jubail Industrial College | Saudi Arabia</p>
+                    <div class="i-meta">September 2020 — May 2025</div>
+                    <ul>
+                        <li>Focus on developing strong problem-solving skills using algorithms and computational
+                            thinking.</li>
+                        <li>Gained proficiency in programming languages and software development practices.</li>
+                        <li>Understood computer architecture, operating systems, and network fundamentals.</li>
+                        <li>Ability to apply data structures and databases to manage and analyze information
+                            effectively.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section style="margin-top:40px">
+                <div class="section-title">Projects</div>
+
+                <div class="cv-item">
+                    <p class="i-title">Graduation Project: Plant Disease Detection</p>
+                    <p class="i-sub">Final Year Project | 2025</p>
+                    <ul>
+                        <li>Developing a model utilizing image processing and deep learning techniques to accurately
+                            detect plant diseases.</li>
+                        <li>The project includes building and training neural networks to analyze leaf images.</li>
+                        <li>Currently, a mobile application is being developed using Dart to provide real-time disease
+                            identification.</li>
+                    </ul>
+                    <div class="tools-badge">
+                        <span><i class="fa-brands fa-python"></i> Python</span>
+                        <span><i class="fa-solid fa-microchip"></i> TensorFlow</span>
+                        <span><i class="fa-brands fa-dart"></i> Dart</span>
+                        <span><i class="fa-solid fa-mobile-screen-button"></i> Flutter (Mobile)</span>
+                    </div>
+                </div>
+
+                <div class="cv-item">
+                    <p class="i-title">Internal Dashboards & Tracking Systems</p>
+                    <p class="i-sub">Kayan - Continuous Improvement Department</p>
+                    <ul>
+                        <li>Designed and implemented internal dashboards and tracking systems on SharePoint for Kayan
+                            departments.</li>
+                        <li>Improved data visibility, reduced reliance on manual work, and enabled data-driven decisions
+                            for process optimization.</li>
+                    </ul>
+                    <div class="tools-badge">
+                        <span><i class="fa-brands fa-microsoft"></i> SharePoint</span>
+                        <span><i class="fa-solid fa-chart-line"></i> Power BI</span>
+                        <span><i class="fa-solid fa-file-excel"></i> Excel</span>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top:40px">
+                <div class="section-title">Certifications & Training</div>
+
+                <ul class="skill-list">
+                    <li><i class="fa-solid fa-trophy"></i> Power BI 2025 - From Basic to Advance (SABIC)</li>
+                    <li><i class="fa-solid fa-trophy"></i> Fundamentals of Software Development Concepts</li>
+                    <li><i class="fa-solid fa-trophy"></i> Fundamentals of Artificial Intelligence (SDAIA)</li>
+                </ul>
+            </section>
+
+            <section style="margin-top:40px">
+                <div class="section-title">Skills & Languages</div>
+
+                <div class="grid grid-2">
+                    <article class="card">
+                        <div class="sub-title" style="margin-bottom:10px;">Hard Skills</div>
+                        <ul class="skill-list">
+                            <li><i class="fa-brands fa-python"></i> Python</li>
+                            <li><i class="fa-solid fa-database"></i> SQL (MySQL, Power BI)</li>
+                            <li><i class="fa-brands fa-html5"></i> Web Dev (HTML, CSS, JS)</li>
+                            <li><i class="fa-brands fa-microsoft"></i> SharePoint Administration</li>
+                            <li><i class="fa-solid fa-code"></i> Programming (Java, C++)</li>
+                            <li><i class="fa-solid fa-cubes"></i> OOP / Version Control</li>
+                            <li><i class="fa-solid fa-server"></i> Operating Systems / Networks</li>
+                            <li><i class="fa-solid fa-chart-line"></i> Interactive Dashboard Implementation</li>
+                            <li><i class="fa-solid fa-file-excel"></i> Microsoft Office</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="sub-title" style="margin-bottom:10px;">Soft Skills & Languages</div>
+                        <ul class="skill-list">
+                            <li><i class="fa-solid fa-hands-clapping"></i> Teamwork</li>
+                            <li><i class="fa-solid fa-puzzle-piece"></i> Problem-Solving</li>
+                            <li><i class="fa-solid fa-person-chalkboard"></i> Communication Skills</li>
+                            <li><i class="fa-solid fa-brain"></i> Analytical Thinking</li>
+                            <li><i class="fa-solid fa-clock"></i> Time Management</li>
+                            <li><i class="fa-solid fa-people-arrows"></i> Adaptability</li>
+                            <li><i class="fa-solid fa-flag"></i> Arabic (Native)</li>
+                            <li><i class="fa-solid fa-flag"></i> English (Fluent)</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+
+    </div>
+</body>
+
+</html>
