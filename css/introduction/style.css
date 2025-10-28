@@ -1,0 +1,95 @@
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #eaf2f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  section {
+    background-color: #ffffff;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 85%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Text styling */
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  h2, h3 {
+    color: #004080;
+    margin-bottom: 8px;
+  }
+  
+  p {
+    line-height: 1.7;
+  }
+  
+  /* Table styles for course schedules */
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    border: 1px solid #cdd4da;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .schedule-table th {
+    background-color: #004080;
+    color: white;
+  }
+  
+  /* Unstyled logo tables */
+  .logo-table,
+  .logo-table tr,
+  .logo-table td {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0066cc;
+  }
+  
+  hr {
+    display: none;
+  }
+
+  
+  
