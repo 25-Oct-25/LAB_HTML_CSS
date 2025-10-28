@@ -1,0 +1,554 @@
+/* ========== القيم العامة / الثيم ========== */
+:root {
+    --brand-text: #0f172a;        /* نص غامق */
+    --brand-accent: #1e40af;      /* أزرق ملكي */
+    --brand-accent-hover: #1e3a8a;
+
+    --bg-page: #ffffff;           /* خلفية الصفحة */
+    --bg-soft: #f9fafb;           /* خلفية الكروت */
+    --bg-muted: #f1f5f9;          /* خلفية السطر الرمادي */
+
+    --border-soft: #e5e7eb;       /* حدود الكروت */
+    --border-muted: #cbd5e1;      /* حدود الأزرار في الفيدباك */
+
+    --text-main: #0f172a;
+    --text-sub: #475569;
+    --text-invert: #ffffff;
+
+    --footer-bg: #0f172a;
+    --footer-text: #e2e8f0;
+
+    --radius-card: 1rem;
+    --radius-btn: .5rem;
+    --radius-logo: .75rem;
+    --radius-pill: .75rem;
+}
+
+/* reset بسيط */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* حاوية موحّدة للعرض */
+.container {
+    width: min(1280px, 100%);
+    padding-inline: 1rem;
+    margin-inline: auto;
+}
+
+/* ========== الشريط الحكومي العلوي ========== */
+.gov-bar {
+    background-color: var(--text-main);
+    color: var(--text-invert);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    border-bottom: 2px solid var(--brand-accent);
+}
+
+.gov-bar__inner {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-block: .75rem;
+}
+
+/* صف المعلومات الأول */
+.gov-bar__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+.gov-badge {
+    font-weight: 500;
+}
+
+.gov-check {
+    color: var(--text-invert);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* التلميحات (.gov.sa / HTTPS / رقم التسجيل) */
+.gov-hints {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-invert);
+    font-weight: 400;
+}
+
+/* ========== الهيدر ========== */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-soft);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+/* البراند */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.logo-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-logo);
+    background: radial-gradient(circle at 30% 30%, #1e40af 0%, #6b21a8 60%);
+    color: var(--text-invert);
+    font-weight: 700;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,.4);
+}
+
+.brand-name {
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+/* القائمة */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: .95rem;
+    line-height: 1.3;
+}
+
+.main-nav a:hover {
+    color: var(--brand-accent);
+}
+
+/* زر اللغة */
+.lang-switch {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    color: var(--brand-accent);
+    border: 1px solid var(--brand-accent);
+    border-radius: var(--radius-pill);
+    padding: .5rem .75rem;
+    line-height: 1.2;
+}
+
+.lang-switch:hover {
+    background-color: var(--brand-accent);
+    color: var(--text-invert);
+}
+
+/* زر الموبايل (ما فيه JS للحين، بس للواجهة) */
+.mobile-menu-btn {
+    --bar-h: 2px;
+    display: none; /* يبان بس في الشاشات الصغيرة */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-btn);
+    cursor: pointer;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 22px;
+    height: var(--bar-h);
+    background-color: var(--text-main);
+    border-radius: 1px;
+}
+
+/* ========== الهيرو ========== */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(30,64,175,.12) 0%, rgba(255,255,255,0) 60%);
+    padding-block: 4rem 3rem;
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-title {
+    font-size: 2rem;
+    line-height: 1.4;
+    color: var(--text-main);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-desc {
+    font-size: 1rem;
+    color: var(--text-sub);
+    max-width: 42ch;
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+/* أزرار رئيسية */
+.btn-primary {
+    background-color: var(--brand-accent);
+    color: var(--text-invert);
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: .75rem 1rem;
+    border-radius: var(--radius-btn);
+    text-decoration: none;
+    box-shadow: 0 20px 40px -10px rgba(30,64,175,.5);
+    border: 1px solid var(--brand-accent);
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-accent-hover);
+    border-color: var(--brand-accent-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--brand-accent);
+    border: 1px solid var(--brand-accent);
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: .75rem 1rem;
+    border-radius: var(--radius-btn);
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background-color: var(--brand-accent);
+    color: var(--text-invert);
+}
+
+/* عناصر ديكورية في الهيرو */
+.hero-art {
+    position: relative;
+    min-height: 220px;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: .5;
+}
+
+.orb-lg {
+    width: 220px;
+    height: 220px;
+    right: 0;
+    top: 0;
+    background: radial-gradient(circle, #1e40af 0%, #6b21a8 60%);
+    box-shadow: 0 40px 80px -10px rgba(0,0,0,.6);
+}
+
+.orb-sm {
+    width: 120px;
+    height: 120px;
+    left: 20%;
+    bottom: 10%;
+    background: radial-gradient(circle, #10b981 0%, #1e40af 70%);
+    box-shadow: 0 30px 60px -10px rgba(0,0,0,.4);
+}
+
+/* ========== سكشن البطاقات ========== */
+.cards-section {
+    background-color: var(--bg-page);
+    padding-block: 2rem 3rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px,100%),1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: var(--bg-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,.07);
+}
+
+.info-card h2 {
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.info-card p {
+    font-size: .9rem;
+    color: var(--text-sub);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    max-width: 45ch;
+}
+
+.card-link {
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--brand-accent);
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: var(--brand-accent-hover);
+}
+
+/* ========== الفيدباك ========== */
+.feedback {
+    background-color: var(--bg-muted);
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    padding-block: 1.5rem;
+}
+
+.feedback-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.feedback-q {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: .95rem;
+}
+
+.feedback-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.feedback-btn {
+    background-color: #ffffff;
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-btn);
+    padding: .5rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: .9rem;
+    line-height: 1.2;
+}
+
+.feedback-btn.yes {
+    color: #16a34a;
+    border-color: #22c55e;
+}
+
+.feedback-btn.no {
+    color: #dc2626;
+    border-color: #ef4444;
+}
+
+/* ========== الفوتر ========== */
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    margin-top: 3rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    padding-block: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px,100%),1fr));
+}
+
+.footer-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-logo);
+    background: radial-gradient(circle at 30% 30%, #1e40af 0%, #6b21a8 60%);
+    color: var(--text-invert);
+    font-weight: 700;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,.6);
+    margin-bottom: .75rem;
+}
+
+.footer-about p {
+    font-size: .9rem;
+    line-height: 1.6;
+    color: var(--footer-text);
+    max-width: 40ch;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: .75rem;
+}
+
+.footer-links ul,
+.footer-contact ul {
+    list-style: none;
+    display: grid;
+    gap: .5rem;
+    font-size: .9rem;
+    line-height: 1.4;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: var(--footer-text);
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #fff;
+}
+
+/* سوشال */
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--footer-text);
+    border-radius: var(--radius-btn);
+    font-size: .8rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--footer-text);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--footer-text);
+    color: var(--footer-bg);
+}
+
+/* الشريط السفلي للفوتر */
+.footer-bottom {
+    border-top: 1px solid rgba(226,232,240,.1);
+    background-color: #0b1221;
+    color: var(--footer-text);
+    font-size: .8rem;
+}
+
+.footer-bottom-inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ========== ريسبونسف ========== */
+@media (max-width: 768px) {
+
+    .gov-hints {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .25rem;
+        font-size: .75rem;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-desc {
+        font-size: .95rem;
+    }
+
+    .main-nav {
+        display: none; /* نخفي القائمة العريضة على الجوال */
+    }
+
+    .mobile-menu-btn {
+        display: flex; /* نظهر زر المنيو */
+    }
+
+    .lang-switch {
+        order: 10; /* ننزله يمين/يسار حسب لف الناف */
+    }
+
+    .header-inner {
+        justify-content: space-between;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
