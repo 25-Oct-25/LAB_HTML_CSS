@@ -1,0 +1,39 @@
+/* 🌤 Default (Light Mode) Background */
+body {
+  background-image: url("images/bg_light.jpg");
+  background-size: cover;          /* Make the image fill the entire page */
+  background-position: center;     /* Center the background image */
+  background-repeat: no-repeat;    /* Prevent the image from repeating */
+  background-attachment: fixed;    /* Keep the image fixed while scrolling */
+  min-height: 100vh;               /* Ensure it fills at least the full viewport height */
+  transition: background-image 0.5s ease-in-out; /* Smooth transition when switching modes */
+}
+
+/* 🌙 Dark Mode Background */
+.dark body {
+  background-image: url("images/bg_dark.jpg");
+}
+
+/* 🤖 Robot waving animation */
+@keyframes robot-wave {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(-5deg); }
+  50% { transform: translateY(0) rotate(5deg); }
+  75% { transform: translateY(-5px) rotate(-5deg); }
+}
+
+.robot {
+  animation: robot-wave 5s infinite ease-in-out; /* Continuous waving animation */
+}
+
+/* ✨ Fade-in effect when scrolling */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
