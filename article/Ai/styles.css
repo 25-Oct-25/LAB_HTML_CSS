@@ -1,0 +1,350 @@
+/* ========== RESET بسيط / تحسين عام ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #222;
+  font-family: system-ui, Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+
+  /* نخلي الصفحة في الوسط */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* هذا هو الكونتينر العام لعرض الصفحة */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1100px;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* ========== HEADER (العنوان + الوصف + navbar) ========== */
+
+.site-header {
+  width: 100%;
+  background-color: #f5f5f5;              /* نفس خلفية الصفحة */
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1rem 0 1rem;              /* top/right/bottom/left */
+  box-sizing: border-box;
+}
+
+.site-header-inner {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  width: 100%;
+  max-width: 1100px;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.hero-text {
+  margin-bottom: 1rem;
+}
+
+.site-title {
+  margin: 0 0 .5rem 0;
+  font-size: clamp(1.4rem, 1vw + 1rem, 2rem); /* يتكيف مع حجم الشاشة */
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+}
+
+.tagline {
+  margin: 0;
+  color: #666;
+  font-size: .95rem;
+  line-height: 1.4;
+  max-width: 60ch; /* يمنع السطر يكون مررررة طويل */
+}
+
+/* ========== NAVBAR ========== */
+/* هذا النافبار موجود داخل الهيدر */
+
+.ai-navbar {
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+  border-radius: 10px;
+
+  /* نطلع النافبار بعرض الكرت كامل */
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: 1rem;
+  padding: .75rem 1rem;
+
+  position: relative;
+  z-index: 10;
+}
+
+.ai-nav-inner {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* عشان لو الشاشة صغيرة يسمح له يلف */
+}
+
+.ai-brand {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0d6efd;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.ai-brand:hover {
+  color: #063a9c;
+}
+
+.ai-nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.ai-nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: .9rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.ai-nav-links a:hover {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* ========== AREA: المقال الرئيسي (Article) ========== */
+
+.content {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  flex: 1;
+  min-width: 250px;
+  max-width: calc(1100px - 260px - 2rem); /* يترك مساحة للسايدبار */
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.content h2 {
+  color: #111;
+  border-left: 4px solid #0d6efd;
+  padding-left: .5rem;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.content p {
+  color: #555;
+  font-size: .95rem;
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+.content ul {
+  padding-left: 1.2rem;
+  color: #444;
+  font-size: .95rem;
+}
+
+.content li {
+  margin-bottom: .5rem;
+  line-height: 1.5;
+}
+
+/* الصورة داخل المقال */
+.featured-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* الفيديو / اليوتيوب */
+.video-wrapper {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+/* خليه يحترم عرض الكرت بالجوال */
+.video-wrapper iframe {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+  border: 0;
+}
+
+/* ========== الجدول (Jobs table) ========== */
+
+.jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .9rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.jobs-table th,
+.jobs-table td {
+  border: 1px solid #ddd;
+  padding: .75rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.jobs-table th {
+  background: #eef3ff;
+  color: #222;
+  font-weight: 600;
+}
+
+.jobs-table tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+/* ========== السايدبار (Aside) ========== */
+
+.side-note {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  width: 260px;
+  min-width: 220px;
+  padding: 1rem 1.25rem;
+  box-sizing: border-box;
+  height: fit-content;
+  color: #444;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.side-note h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #0d6efd;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ========== الفوتر (Footer) ========== */
+
+.site-footer {
+  text-align: center;
+  font-size: .8rem;
+  color: #666;
+  margin: 2rem 0 3rem;
+  line-height: 1.4;
+}
+
+.site-footer p {
+  margin: .25rem 0;
+}
+
+/* ========== RESPONSIVE / شاشات أصغر ========== */
+
+@media (max-width: 768px) {
+
+  /* الهيدر يصير فل سكرين بدون زوايا دائرية */
+  .site-header-inner {
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 0;
+  }
+
+  .site-title {
+    font-size: 1.4rem;
+  }
+
+  .tagline {
+    font-size: .9rem;
+  }
+
+  /* navbar يلتف عمودي */
+  .ai-navbar {
+    border-radius: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .ai-nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ai-brand {
+    margin-bottom: 0.5rem;
+  }
+
+  .ai-nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .ai-nav-links a {
+    display: block;
+    font-size: 1rem;
+  }
+
+  /* المحتوى يصير عمود بدل صف (المقال فوق والسايدبار تحت أو فوق حسب ترتيبهم في الـHTML) */
+  main {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .content,
+  .side-note {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* تبغى السايدبار يطلع قبل المقال في الجوال؟  
+     احذف الكومنت عن السطر الجاي: */
+  /* .side-note { order: -1; } */
+
+  /* iframe تبع اليوتيوب */
+  .video-wrapper iframe {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
