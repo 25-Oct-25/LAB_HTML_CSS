@@ -1,0 +1,231 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+/*introduction section*/
+#intro {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;    
+    border-radius: 8px;        
+    padding: 20px;             
+    margin: 20px;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#intro h1 {
+    color: #333;               
+    font-family: 'Arial', sans-serif; 
+    font-size: 2em;           
+    margin-bottom: 10px;      
+}
+
+#intro p {
+    color: #555;              
+    font-family: 'Georgia', serif; 
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/*cards section*/
+#card {
+    background-color: #f9f9f9;       
+    border: 1px solid #ddd;       
+    border-radius: 8px;           
+    padding: 20px;                
+    margin: 20px;                 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;        
+}
+
+#card h3 {
+    color: #333;                  
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.5em;            
+    margin-bottom: 15px;
+}
+
+#html4, #html5 {
+    display: inline-block;        
+    width: 50%;                  
+    max-width: 40%;       
+    min-width: 150px;     
+    margin: 10px;        
+}
+
+#card img {
+    max-width: 100%;             
+    height: auto;               
+    border-radius: 4px;         
+}
+
+/*tags section*/
+#tags {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;    
+    border-radius: 8px;        
+    padding: 20px;             
+    margin: 20px;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#tags h3 {
+    color: #333;               
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.8em;           
+    margin-bottom: 15px;      
+}
+
+#tags ol {
+    padding-left: 20px;
+    text-align: left; 
+ 
+}
+
+#tags li {
+    margin-bottom: 15px; 
+}
+
+#tags p {
+    color: #555;              
+    font-family: 'Georgia', serif; 
+    font-size: 1em; 
+    line-height: 1.6;
+    margin: 10px 0; 
+}
+
+#tags ul {
+    margin-top: 5px; 
+    padding-left: 20px; 
+}
+
+/*ele section*/
+#ele {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;    
+    border-radius: 8px;        
+    padding: 20px;             
+    margin: 20px;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#ele h3 {
+    color: #333;               
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.8em;           
+    margin-bottom: 15px;      
+}
+
+#ele table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+}
+
+#ele th, #ele td {
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    text-align: left; 
+}
+
+#ele th {
+    background-color: #f2f2f2; 
+    color: #333; 
+    font-family: 'Arial', sans-serif; 
+}
+
+#ele td {
+    color: #555; 
+    font-family: 'Georgia', serif; 
+}
+
+/*links section*/
+#link {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;    
+    border-radius: 8px;        
+    padding: 20px;             
+    margin: 20px;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#link h3 {
+    color: #333;               
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.8em;           
+    margin-bottom: 15px;      
+}
+
+#link ol {
+    padding-left: 20px;
+    text-align: left; 
+}
+
+#link li {
+    margin-bottom: 10px; 
+}
+
+#link a {
+    color: #007bff; 
+    text-decoration: none; 
+    font-family: 'Georgia', serif; 
+}
+
+#link a:hover {
+    text-decoration: underline; 
+}
+
+/*exercise section*/
+#exer {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;    
+    border-radius: 8px;        
+    padding: 20px;             
+    margin: 20px;              
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#exer h3 {
+    color: #333;               
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.8em;           
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#exer label {
+    color: #555; 
+    font-family: 'Georgia', serif; 
+    margin: 10px 0;
+}
+
+#exer input[type="text"],
+#exer input[type="checkbox"],
+#exer input[type="radio"],
+#exer input[type="submit"] {
+    margin: 5px 0; 
+}
+
+#exer input[type="text"] {
+    padding: 5px;
+    width: 40%;
+    min-width: 150px;
+}
+
+#exer input[type="submit"] {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    display: block;
+    margin: 20px auto;
+}
+
+#exer input[type="submit"]:hover {
+    background-color: #0056b3; 
+}

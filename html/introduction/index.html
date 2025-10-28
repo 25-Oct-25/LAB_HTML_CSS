@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project one</title>
+    <link rel="stylesheet" href="../../css/introduction/index.css">
+</head>
+<body>
+    <div id="intro">
+        <h1>introduction to HTML</h1>
+        <p>
+            HTML is a markup language consisting of a series of elements used 
+            to wrap (or enclose) text content to define its structure and 
+            cause it to behave in a certain way.
+        </p>
+    </div>
+     
+    <div id="card">
+        <h3>the difference in structure between HTML4 & HTML5</h3>
+        <div id="html4"><img src="../../img/html4.png"></div>
+        <div id="html5"><img src="../../img/html5.png"></div>
+    </div>
+    
+    <div id="tags">
+        <h3>there are two types of tags in HTML</h3>
+        <ol>
+            <li><b>empty tags:</b>
+                <p>Empty tags, also known as self-closing tags, do not have any content
+                between an opening and closing tag because they do not enclose any text or other elements.</p>
+                <ul>
+                    <li>&lt;img&gt;: Used to embed images.</li>
+                    <li>&lt;br&gt; : Inserts a line break.</li>
+                    <li>&lt;hr&gt; : Represents a thematic break (horizontal rule).</li>
+                    <li>&lt;input&gt;: Represents an input field in forms.</li>
+                </ul>
+            </li>
+            <br>
+            <li><b>container tags:</b>
+                <p>Container tags enclose content, which can include text,
+                other HTML elements, or both. They consist of an opening tag and a corresponding closing tag.</p>
+                <ul>
+                    <li>&lt;div&gt;: A generic container for block-level elements.</li>
+                    <li>&lt;p&gt;: Represents a paragraph of text.</li>
+                    <li>&lt;h1&gt; to &lt;h6&gt;: Header tags for different levels of headings.</li>
+                    <li>&lt;a&gt;: Represents a hyperlink.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div id="ele">
+        <h3>there are two types of element</h3>
+        <table>
+            <tr>
+                <th>type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>
+                    inline
+                </td>
+                <td>
+                    These elements are on a single line unless separated by a space between them.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    block
+                </td>
+                <td>
+                    These elements are in blocks and leave spaces before and after them, so that each element is on a separate line.
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="link">
+        <h3>
+            Links to some useful resources
+        </h3>
+        <ol>
+            <li>
+                <a href="https://www.w3schools.com/html/html_basic.asp">w3schools</a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content">MDN</a>
+            </li>
+        </ol>
+    </div>
+
+    <div id="exer">
+        <h3>
+            Exercise
+        </h3>
+        <form>
+            <label for="q1">Q1: HTML stand for what?</label><br>
+            <input type="text" id="q1"><br>
+            <p>Q2: what are considered an empty tags (two choices)?</p>
+            <input type="checkbox" id="choi1" name="choi1" value="img">
+            <label for="choi1"> &lt;img&gt;</label><br>
+            <input type="checkbox" id="choi2" name="choi2" value="div">
+            <label for="choi2"> &lt;div&gt;</label><br>
+            <input type="checkbox" id="choi3" name="choi3" value="input">
+            <label for="choi3"> &lt;input&gt;</label><br>
+            <input type="checkbox" id="choi4" name="choi4" value="h1">
+            <label for="choi4"> &lt;h1&gt;</label>
+            <p>Q3: what are considered a container tags (two choices)?</p>
+            <input type="checkbox" id="choi5" name="choi5" value="br">
+            <label for="choi5"> &lt;br&gt;</label><br>
+            <input type="checkbox" id="choi6" name="choi6" value="p">
+            <label for="choi6"> &lt;p&gt;</label><br>
+            <input type="checkbox" id="choi7" name="choi7" value="hr">
+            <label for="choi7"> &lt;hr&gt;</label><br>
+            <input type="checkbox" id="choi8" name="choi8" value="a">
+            <label for="choi8"> &lt;a&gt;</label>
+            <p>Q4: elements are on a single line unless separated by a space between them?</p>
+            <input type="radio" id="inline" name="#" value="inline">
+            <label for="inline">inline</label><br>
+            <input type="radio" id="block" name="#" value="block">
+            <label for="css">block</label><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
