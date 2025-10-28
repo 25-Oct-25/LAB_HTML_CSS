@@ -1,0 +1,37 @@
+/* ANIMATIONS */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  @keyframes bounceArrow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+  }
+  
+  /* APPLY ANIMATIONS */
+  .animate-fadeInDown { animation: fadeInDown 1s ease forwards; }
+  .animate-fadeInUp { animation: fadeInUp 1s ease forwards; }
+  .animate-fadeInLeft { animation: fadeInLeft 1s ease forwards; }
+  .animate-fadeInRight { animation: fadeInRight 1s ease forwards; }
+  .animate-bounceArrow { animation: bounceArrow 2s infinite; }
+  
+  /* DELAY CLASSES */
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-400 { animation-delay: 0.4s; }
+  

@@ -1,0 +1,147 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #a60744, #b5557a);
+    color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #b5557a;
+}
+
+
+
+
+/* Articles (Books) */
+article {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* div Books */
+div {
+    display: flex;
+    gap: 20px;
+}
+
+article img {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Forms */
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="text"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #b5557a;
+}
+
+form input[type="submit"] {
+    padding: 12px 20px;
+    background: #b5557a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background: #b76c89;
+}
+
+/* Ratings and checkboxes */
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Details summary */
+details summary {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to left, #a60744, #b5557a);
+    color: white;
+    margin-top: 25px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

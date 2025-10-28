@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyProject</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 border-b">
+    <h1 class="text-2xl font-bold">MyProject</h1>
+    <nav class="space-x-6">
+      <a href="#features" class="hover:text-gray-500 transition">Features</a>
+      <a href="#products" class="hover:text-gray-500 transition">Products</a>
+      <a href="#contact" class="hover:text-gray-500 transition">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative flex flex-col items-center justify-center text-center h-[100vh] bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 p-8">
+      <h2 class="text-5xl font-bold text-white mb-4">Experience Innovation</h2>
+      <p class="text-lg text-white mb-6 max-w-xl mx-auto">Discover our cutting-edge tools and solutions designed to make your work effortless and enjoyable.</p>
+      <a href="#signup" class="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
+        Get Started
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 px-4 bg-gray-50">
+    <h3 class="text-3xl font-bold text-center mb-12">Features</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center p-6 border rounded-lg shadow-sm">
+        <h4 class="font-semibold mb-2">Fast Performance</h4>
+        <p>Optimized for speed and reliability across all devices.</p>
+      </div>
+      <div class="text-center p-6 border rounded-lg shadow-sm">
+        <h4 class="font-semibold mb-2">Secure</h4>
+        <p>We prioritize your privacy and data security above all.</p>
+      </div>
+      <div class="text-center p-6 border rounded-lg shadow-sm">
+        <h4 class="font-semibold mb-2">User Friendly</h4>
+        <p>Clean interface and intuitive navigation for everyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16 px-4">
+    <h3 class="text-3xl font-bold text-center mb-12">Our Products</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center p-6 border rounded-lg shadow-sm">
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Product 1" class="w-full h-48 object-cover rounded-lg mb-4">
+        <h4 class="font-semibold mb-2">Product 1</h4>
+        <p>High-quality product designed to meet your needs.</p>
+      </div>
+      <div class="text-center p-6 border rounded-lg shadow-sm">
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Product 2" class="w-full h-48 object-cover rounded-lg mb-4">
+        <h4 class="font-semibold mb-2">Product 2</h4>
+        <p>Innovative features that enhance your experience.</p>
+      </div>
+      <div class="text-center p-6 border rounded-lg shadow-sm">
+        <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Product 3" class="w-full h-48 object-cover rounded-lg mb-4">
+        <h4 class="font-semibold mb-2">Product 3</h4>
+        <p>Reliable and durable for everyday use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-4 bg-gray-50">
+    <h3 class="text-3xl font-bold text-center mb-12">Contact Us</h3>
+    <form action="#" method="POST" class="max-w-lg mx-auto bg-white p-8 border rounded-lg shadow-sm">
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg" required>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+        <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg" required>
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg" required></textarea>
+      </div>
+      <button type="submit" class="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition">
+        Send Message
+      </button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t mt-16 text-gray-500">
+    © 2025 MyProject. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Revolution 🌍</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ Tailwind Dark Mode Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'], // for regular text
+            heading: ['Poppins', 'ui-sans-serif', 'system-ui'], // for headings
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- 3D Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+
+  <!-- Light/Dark Mode Toggle Button -->
+  <button id="modeToggle" aria-label="Toggle Light/Dark Mode"
+    class="fixed top-5 right-5 z-[9999] bg-gray-200 dark:bg-gray-700 text-lg p-2 rounded-full shadow hover:scale-105 transition">
+    🌓
+  </button>
+
+  <!-- Header -->
+  <header class="text-center py-8 bg-white dark:bg-gray-800 shadow-md transition">
+    <h1 class="font-heading text-4xl font-extrabold mb-2 animate-pulse">The AI Revolution 🤖</h1>
+    <p class="text-gray-600 dark:text-gray-300">
+      Exploring how Artificial Intelligence is reshaping our world
+    </p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-100 dark:bg-gray-800 shadow-md sticky top-0 z-50 transition">
+    <ul class="flex justify-center gap-8 p-4">
+      <li><a href="#intro" class="hover:text-indigo-600 dark:hover:text-pink-400 transition">Introduction</a></li>
+      <li><a href="#impact" class="hover:text-indigo-600 dark:hover:text-pink-400 transition">Impact</a></li>
+      <li><a href="#future" class="hover:text-indigo-600 dark:hover:text-pink-400 transition">Future</a></li>
+    </ul>
+  </nav>
+
+  <!-- Floating 3D Robot -->
+  <model-viewer 
+     src="images/robot.glb" 
+     alt="3D Robot"
+     auto-rotate 
+     camera-controls 
+     class="fixed bottom-5 right-5 w-20 h-20 md:w-32 md:h-32 z-50">
+  </model-viewer>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-6 py-10">
+
+    <!-- Introduction Section -->
+    <section id="intro" class="mb-12 fade-in">
+      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h2 class="font-heading text-2xl font-bold mb-3 dark:text-pink-300">Introduction to AI</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. 
+          It enables computers to learn from data, recognise patterns, and make decisions — 
+          shaping industries from healthcare to transportation.
+        </p>
+        <img src="images/ai_systems.jpg" 
+             alt="AI concept" class="rounded-lg mt-4 shadow w-full max-w-xl h-auto mx-auto" />
+      </article>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="mb-12 fade-in">
+      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h2 class="font-heading text-2xl font-bold mb-3 dark:text-pink-300">AI’s Impact on Society</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          AI has already transformed our lives. From self-driving cars and smart assistants 
+          to medical diagnoses, it has improved accuracy, efficiency, and accessibility. 
+          However, it also raises ethical questions about privacy, bias, and employment.
+        </p>
+        <div class="relative pt-[56.25%]">
+         <iframe class="absolute top-0 left-0 w-full h-full rounded-lg shadow"
+          src="https://www.youtube.com/embed/KqLTfgZrEKw?si=GnxpLhmwhEy2WVap" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+         </iframe>
+        </div>
+      </article>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="fade-in">
+      <article class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+        <h2 class="font-heading text-2xl font-bold mb-3 dark:text-pink-300">The Future of AI</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          The future of AI is both exciting and uncertain. With advancements in deep learning, 
+          robotics, and neural networks, we are moving closer to a world where AI can augment 
+          human creativity and decision-making in powerful ways.
+        </p>
+        <img src="images/ai_future.jpg" 
+             alt="Future AI" class="rounded-lg mt-4 shadow w-full max-w-xl h-auto mx-auto" />
+      </article>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 dark:bg-gray-950 text-gray-300 dark:text-gray-400 py-6 text-center mt-10">
+    <p>© 2025 AI Insights | Built with ❤️, Tailwind CSS & CSS Animations</p>
+  </footer>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Toggle between light and dark mode
+      const toggle = document.getElementById("modeToggle");
+      if (toggle) {
+        toggle.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+          console.log("🌗 Mode toggled");
+        });
+      }
+
+      // Fade-in animation for sections
+      const faders = document.querySelectorAll(".fade-in");
+      const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+      const appearOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("appear");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, appearOptions);
+      faders.forEach((fader) => appearOnScroll.observe(fader));
+    });
+  </script>
+
+</body>
+</html>

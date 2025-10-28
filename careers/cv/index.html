@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghala Alnmasi | CV Landing Page</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init({ publicKey: "UfHq52twnct2j-kmH" });
+    })();
+  </script>
+
+  <style>
+    body {
+      font-family: "Comic Neue", sans-serif;
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+      font-family: "Fredoka One", cursive;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .animate-fadeInUp { animation: fadeInUp 1s ease forwards; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+
+  <!-- HERO -->
+  <section class="relative h-screen flex flex-col justify-center items-center text-white text-center bg-gradient-to-br from-indigo-500 to-purple-600"
+    style="background-image: url('images/Purple and White.jpg'); background-size: cover; background-position: center;">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 animate-fadeInUp">Ghala Alnmasi</h1>
+    <p class="text-lg sm:text-xl md:text-2xl mb-6 animate-fadeInUp">Computer Science Graduate | Full Stack Developer | UX/UI Lover</p>
+    <a href="#contact"
+      class="bg-pink-500 hover:bg-pink-400 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 animate-fadeInUp">
+      Contact Me
+    </a>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 py-16">
+
+    <!-- PROFILE -->
+    <section id="profile" class="text-center space-y-4">
+      <h2 class="text-3xl text-purple-700 mb-4 border-b-4 border-pink-400 inline-block">Profile</h2>
+      <p class="max-w-3xl mx-auto text-gray-700 leading-relaxed">
+        Driven computer science graduate with a strong foundation in software development, UXUI design and a passion
+        for innovative technology solutions. I have hands-on experience in diverse projects, excelling at identifying and
+        resolving complex technical challenges. Eager to expand my expertise and contribute to pioneering technological
+        advancements.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="space-y-8">
+      <h2 class="text-3xl text-purple-700 mb-4 border-b-4 border-pink-400 inline-block">Experience</h2>
+      <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeInUp">
+          <img src="images/logo-jouf.svg" alt="Aljouf Chamber Logo" class="w-[96px] h-[96px] mb-4">
+          <h3 class="text-xl font-bold text-purple-700">Aljouf Chamber</h3>
+          <span class="text-gray-500 text-sm">Jul 2023 – Sep 2023</span>
+          <ul class="list-disc list-inside mt-3 text-gray-700">
+            <li>UI/UX & infographic design</li>
+            <li>Ad design on Canva</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeInUp">
+          <img src="images/long-logo.webp" alt="Tuwaiq Academy Logo" class="w-[168px]  rounded-xl mb-4">
+          <h3 class="text-xl font-bold text-purple-700">Tuwaiq Academy</h3>
+          <span class="text-gray-500 text-sm">Oct 2025 – Dec 2025</span>
+          <ul class="list-disc list-inside mt-3 text-gray-700">
+            <li>Full Stack Developer using Python</li>
+            <li>Django, HTML, CSS, Git & GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-12">
+        <h2 class="text-3xl text-purple-700 mb-6 border-b-4 border-pink-400 inline-block">Education</h2>
+        <div class=" p-6 rounded-xl shadow-md flex flex-col sm:flex-row sm:items-start gap-4 hover:shadow-lg transition animate-fadeInUp">
+          <img src="images/JU-Logo.jpg" alt="Jouf University" class="w-[90px]" />
+          <div>
+            <h3 class="text-xl font-bold">Bachelor in Computer Science | Jouf University</h3>
+            <p class="text-gray-500 text-sm">2020-2024 | GPA: 4.44 of 5 | Second Honored</p>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+              <li>Graduation Project: ResourcesSync – Learning Hub</li>
+              <li>Frontend: HTML, CSS, JS | Backend: PHP, SQL</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    <!-- projects -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl text-purple-700 mb-4 border-b-4 border-pink-400 inline-block">Projects</h2>
+
+          <div class="flex gap-8 flex-col">
+            <!-- project 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeInUp">
+                <img src="images/logo-hakth.png" alt="Women's Digital Health Hackathon" class="w-[23%] rounded-xl mb-4">
+                <h3 class="text-xl font-bold text-purple-700">Women's Digital Health Hackathon</h3>
+                <span class="text-gray-500 text-sm">Oct 2024 – Nov 2024</span>
+                <ul class="list-disc list-inside mt-3 text-gray-700">
+                  <li>Project: Ana Wa Janyny</li>
+                </ul>
+            </div>
+      
+            <!-- project 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeInUp">
+                <h3 class="text-xl font-bold text-purple-700">Hackathon of Programmers for Sustainable Agricultural Development</h3>
+                <span class="text-gray-500 text-sm">Mar 2022 – Apr 2022</span>
+                <ul class="list-disc list-inside mt-3 text-gray-700">
+                  <li>Project: SEED </li>
+                </ul>
+              </div>
+              <!-- project 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition animate-fadeInUp">
+                <img src="images/logo_ar.svg" alt="Jouf University Graduation Project" class=" mb-4">
+                <h3 class="text-xl font-bold text-purple-700">Graduation Project</h3>
+                <span class="text-gray-500 text-sm">Oct 2025 – Dec 2025</span>
+                <ul class="list-disc list-inside mt-3 text-gray-700">
+                  <li>Project: ResourcesSync: Collaborative Learning Hub.</li>
+                  <li>Methodology used "waterfall methodology".</li>
+                  <li>Frontend Development: HTML, CSS, JavaScript.</li>
+                  <li>Backend Development: PHP, SQL.</li>
+                  <li>Tools & Technologies:MySQL, Overleaf, Canva, and more.</li>
+                </ul>
+              </div>
+        </div>
+      </section>
+
+    
+    <!-- SKILLS -->
+    <section id="skills" class="flex flex-col items-center rounded-2xl py-8">
+        <h2 class="text-3xl text-purple-700 mb-8 border-b-4 border-pink-400 inline-block animate-fadeInLeft">Skills</h2>
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <!-- Frontend Skills -->
+        <div class="animate-fadeInUp delay-200 flex flex-col items-center">
+            <img src="images/frontend-skills.jpg" alt="Frontend Tools" class="w-[76px] mb-2 object-contain"> 
+            <h3 class="font-semibold">HTML-JavaScript-CSS</h3>
+        </div>
+        <!-- Backend Skills  -->
+        <div class="animate-fadeInUp delay-200 flex flex-col items-center">
+            <div class="flex gap-2 flex-row">
+                <img src="images/python-logo.png" alt="Python Logo" class="w-10 h-10 rounded-xl object-contain">
+                <img src="images/Java_logo.svg.png" alt="Java Logo" class="w-10 h-10  rounded-xl object-contain">
+                <img src="images/PHP-logo.svg.png" alt="PHP Logo" class="w-10 h-10  rounded-xl object-contain">
+            </div>
+            <h3 class="font-semibold">Python-JAVA-PHP</h3>
+        </div>
+        <!-- Tools & Tech Skills -->
+        <div class="animate-fadeInUp delay-400 flex flex-col items-center">
+            <div class="flex gap-2 flex-row">
+                <img src="images/Git-Icon.png" alt="Git Logo" class="w-9 h-9 rounded-xl object-contain">
+                <img src="images/github-tool.png" alt="GitHub Logo" class="w-10 h-10  rounded-xl object-contain">
+                <img src="images/django-logo.png" alt="Django Logo" class="w-10 h-10  rounded-xl object-contain">
+                <img src="images/Sql-logo.png" alt="SQL Logo" class="w-10 h-10  rounded-xl object-contain">
+                <img src="images/Figma-logo.svg" alt="Figma Logo" class="w-10 h-10  rounded-xl object-contain">
+                <img src="images/canva_logo.png" alt="Canva Logo" class="w-10 h-10  rounded-xl object-contain">
+              </div>
+            <h3 class="font-semibold">Git&Github-Django-SQL-Figma-Canva</h3>
+        </div>
+        </div>
+        <!-- Skills Bars -->
+        <div class="grid md:grid-cols-3 gap-8 ">
+        <div class="bg-white p-4 rounded-xl shadow-lg">
+            <h3 class="font-semibold mb-2">Frontend</h3>
+            <div class="w-full bg-gray-200 rounded-full h-4 mb-4">
+            <div class="bg-purple-500 h-4 rounded-full w-80 transition-all duration-1000"></div>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-lg">
+            <h3 class="font-semibold mb-2">Backend</h3>
+            <div class="w-full bg-gray-200 rounded-full h-4 mb-4">
+            <div class="bg-purple-800 h-4 rounded-full w-72 transition-all duration-1000"></div>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-lg">
+            <h3 class="font-semibold mb-2">Tools & Tech</h3>
+            <div class="w-full bg-gray-200 rounded-full h-4 mb-4">
+            <div class="bg-pink-500 h-4 rounded-full w-60 transition-all duration-1000"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="flex flex-col items-center rounded-2xl py-8">
+        <h2 class="text-3xl text-purple-700 mb-8 border-b-4 border-pink-400 inline-block">Certifications</h2>
+      
+        <div class="flex gap-6 flex-wrap justify-center">
+          <div class="bg-gradient-to-br from-pink-200 to-purple-500 p-6 rounded-xl shadow-md text-center">
+            <img src="images/pcep.png" alt="PCEP Certificate" class="w-[100px] mx-auto mb-3" />
+            <h3 class="font-semibold">PCEP – Python Institute – 2025</h3>
+          </div>
+      
+          <div class="bg-gradient-to-br from-purple-500 to-pink-200 p-6 rounded-xl shadow-md text-center">
+            <img src="images/logo-sce.svg" alt="SCE Logo" class="w-[100px] mx-auto mb-3" />
+            <h3 class="font-semibold">Saudi Council of Engineers – ID: 1171819</h3>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- CONTACT -->
+    <section id="contact" class="text-center">
+      <h2 class="text-3xl text-purple-700 mb-6 border-b-4 border-pink-400 inline-block">Contact Me</h2>
+      <form id="cv-form" class="flex flex-col md:w-1/2 mx-auto space-y-4">
+        <input type="text" id="name" name="name" required placeholder="Your Name"
+          class="p-3 border rounded-lg focus:ring-2 focus:ring-purple-400" />
+        <input type="email" id="email" name="email" required placeholder="Your Email"
+          class="p-3 border rounded-lg focus:ring-2 focus:ring-purple-400" />
+        <input type="hidden" name="message"
+          value="Please find my CV here: https://drive.google.com/file/d/1A4tAGjY8AERpZJNo9waJhTl6BGMJBBr9/view?usp=share_link" />
+        <input type="hidden" name="from_email" value="ghalaalnmasi@gmail.com" />
+        <button type="submit"
+          class="bg-purple-600 hover:bg-pink-500 text-white py-3 rounded-lg transition font-semibold">
+          Send
+        </button>
+      </form>
+      <p class="text-sm text-gray-500 mt-2">Your message will be sent directly via EmailJS.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-purple-700 text-white text-center py-4">
+    &copy; 2025 Ghala Alnmasi | All Rights Reserved
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
