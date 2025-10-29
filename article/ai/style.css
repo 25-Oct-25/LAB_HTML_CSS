@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #0d1117, #000);
+  color: #e6e6e6;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #000;
+  color: #4ade80;
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #22c55e;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #86efac;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #22c55e; }
+  to { text-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e; }
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #86efac;
+  font-weight: bold;
+  padding: 8px 14px;
+  border: 2px solid #22c55e;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #22c55e;
+  color: #000;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #22c55e33;
+  border: 1px solid #22c55e44;
+}
+
+section {
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section h2 {
+  color: #4ade80;
+  margin-bottom: 15px;
+  border-left: 5px solid #22c55e;
+  padding-left: 10px;
+}
+
+section p, section li {
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+section img, section video {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #22c55e;
+  margin-top: 15px;
+  box-shadow: 0 0 10px #22c55e55;
+}
+
+ul {
+  padding-left: 25px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #22c55e;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #16a34a;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  background-color: #000;
+  color: #22c55e;
+  padding: 20px;
+  border-top: 2px solid #22c55e;
+}
