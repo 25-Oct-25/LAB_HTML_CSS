@@ -1,0 +1,147 @@
+body {
+  background-color: rgb(245, 239, 220);
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  color: #2e2e2e;
+}
+
+
+.content {
+  width: 80%;
+  margin: auto;
+}
+
+
+h1, h2 {
+  text-align: center;
+  color: #3b2a16;
+}
+
+
+p {
+  text-align: center;
+  line-height: 1.6;
+}
+
+
+.btn {
+  background-color: rgb(211, 185, 148);
+  border: none;
+  padding: 10px 20px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+
+}
+
+.btn:hover {
+  background-color: rgb(196, 170, 136);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+.box{
+  width: 50%;
+  justify-items: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgb(211, 185, 148);
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+}
+
+.card img {
+  border-radius: 10px;
+  height: 300px;
+  width: 200px;
+  padding-top: 10px;
+}
+
+
+.btn-book {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.btn-book:hover {
+  background-color: black;
+  color: white;
+}
+
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 90%;
+  text-align: center;
+}
+
+thead {
+  background-color: rgb(211, 185, 148);
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+form {
+  width: 80%;
+  margin: 30px auto;
+}
+
+fieldset {
+  border: 2px solid rgb(211, 185, 148);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+legend {
+  font-weight: bold;
+  color: #3b2a16;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  width: 60%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button[type="submit"] {
+  background-color: rgb(211, 185, 148);
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
