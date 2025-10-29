@@ -1,0 +1,242 @@
+body {
+    background-color: #f0f2f5;
+    background-image: url('images/space-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(48, 24, 24, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #5372ad;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #c5beeb;
+    margin-top: 20px;
+}
+
+.header-image {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.header-image img {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    border: 3px solid #3498db;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+}
+nav {
+    text-align: center;
+    margin: 30px 0;
+    padding: 15px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ecf0f1;
+    text-decoration: underline;
+}
+
+table {
+    border: 2px solid #3498db;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #3498db;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e3f2fd;
+}
+ul, ol {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+li {
+    margin: 10px 0;
+    color: #555555;
+    font-size: 1.05rem;
+}
+
+.galaxy-info {
+    background: #ebedf1;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.galaxy-info h3 {
+    color: #c5beeb;
+    margin-top: 15px;
+}
+
+.galaxy-info p {
+    color: #666666;
+    margin-left: 20px;
+}
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border: 2px solid #bdc3c7;
+    color: #333333;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+.submit-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.submit-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #1f618d);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px;
+    background: #5a93cb;
+    border-radius: 10px;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+footer a {
+    color: #f6f9fb;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #efeaec;
+}
+
+.footer-note {
+    color: #021a32cf;
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
