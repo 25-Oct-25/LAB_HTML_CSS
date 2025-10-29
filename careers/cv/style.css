@@ -23,7 +23,6 @@ body {
   scroll-behavior: smooth;
 }
 
-
 .bar {
   display: flex;
   align-items: center;
@@ -76,15 +75,15 @@ nav ul li:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: bgZoom 3s ease-in-out 1 forwards;
+  animation: bgZoom 1s ease-in-out 1 forwards;
 }
 
 @keyframes bgZoom {
   0% {
-    transform: scale(1);
+    transform: scale(0.9);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
@@ -92,7 +91,7 @@ header h1 {
   font-family: "Baloo 2", system-ui;
   letter-spacing: 0.8px;
   font-size: clamp(50px, 8vw, 88px);
-  margin: 10% 0% 0% 20%;
+  margin: 10% 0% 0% 10%;
   text-shadow: 0 6px 0 #f8efe7;
   color: #8cbec0;
 
@@ -112,7 +111,7 @@ header h1 {
 .title-header {
   text-align: start;
   width: 30%;
-  margin: 2% 0% 0% 20%;
+  margin: 2% 0% 0% 10%;
   opacity: 0;
   animation: fadeInUp 2s ease forwards;
   color: #0598a8;
@@ -133,7 +132,7 @@ header h1 {
   color: #0a5b74;
   margin-bottom: 20px;
   letter-spacing: 2px;
-  font-size: 42px;
+  font-size: 36px;
   font-family: "Baloo 2";
 }
 
@@ -143,10 +142,9 @@ header h1 {
 
 .title-header p {
   color: #f8efe7;
-  line-height: 1.8;
-  font-size: 1.1em;
+  line-height: 1.4;
+  font-size: 24px;
   font-weight: 800;
-  font-size: 32px;
   font-family: "Baloo 2";
 }
 
@@ -155,9 +153,9 @@ main {
   align-items: center;
   gap: 20px;
   padding: 50px 80px;
-  width: 70%;
+  width: 95%;
   border-radius: 10px;
-  margin: 5% auto 0 auto;
+  margin: 10% auto 0 auto;
 }
 
 
@@ -179,7 +177,7 @@ main {
 .section-title {
   margin: 32px 0 14px;
   font-family: "Baloo 2";
-  font-size: 34px;
+  font-size: 28px;
   display: inline-block;
   padding: 6px 14px;
   color: #f8efe7;
@@ -224,7 +222,7 @@ main {
 
 .tilte-ex {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 20px;
   color: #8cbec0;
 }
 
@@ -328,8 +326,8 @@ main {
   margin-top: 5%;
 }
 .app {
-  width: 70px;
-  height: 70px;
+  width: 56px;
+  height: 56px;
   background: #fff;
   border-radius: 50%;
   display: grid;
