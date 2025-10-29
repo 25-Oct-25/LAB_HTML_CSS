@@ -91,7 +91,7 @@
 
 1. **1: Semantic HTML**
    - Learn about semantic HTML tags: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`.
-   - Resources: MDN Web Docs - [HTML5 Semantic Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
+   - Resources: MDN Web Docs - [HTML5 Semantic Elements](https://deve loper.mozilla.org/en-US/docs/Web/HTML/Element/section)
 
 2. **2: Responsive Design**
    - Learn about media queries and responsive design principles.
