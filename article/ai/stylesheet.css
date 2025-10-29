@@ -1,0 +1,406 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(53, 50, 50);
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1rem;
+    list-style: none;
+    font-size: 15px;
+
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        color: rgb(0, 0, 0);
+    }
+
+    #first {
+        animation-duration: 3s;
+        animation-name: fade-in;
+        animation-timing-function: ease-in-out;
+        animation-direction: forwords;
+        
+    }
+
+    #second {
+        animation-duration: 3s;
+        animation-name: fade-in;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0.5s;
+        animation-direction: forwords;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    #third {
+        animation-duration: 3s;
+        animation-name: fade-in;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-direction: forwords;
+        opacity: 0;
+    }
+
+    #fourth {
+        animation-duration: 3s;
+        animation-name: fade-in;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+        animation-direction: forwords;
+        opacity: 0;
+    }
+
+    #fifth {
+        animation-duration: 3s;
+        animation-name: fade-in;
+        animation-timing-function: ease-in-out;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        animation-direction: forwords;
+        opacity: 0;
+    }
+
+}
+
+#title {
+    
+    margin-left: 5%;
+    margin-top: 15%;
+    max-width: 990px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwords;
+
+
+}
+
+#intro {
+    
+    margin-left: 10%;
+    margin-top: 5%;
+    max-width: 700px;
+    text-indent: 6%;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+
+
+}
+
+#the-past {
+    margin-left: 5%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 25px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#past {
+    margin-left: 10%;
+    text-indent: 6%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#past-tags {
+    margin-left: 10%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#the-how {
+    margin-left: 5%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 25px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2.5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#how {
+    margin-left: 10%;
+    text-indent: 6%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#how-tags {
+    margin-left: 10%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3.5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+#the-impact {
+    margin-left: 5%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+
+    font-size: 25px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#impact {
+    margin-left: 10%;
+    text-indent: 6%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4.5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+#impact-tags {
+    margin-left: 10%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#the-challenges {
+    margin-left: 5%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+
+    font-size: 25px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 5.5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#challenges {
+    margin-left: 10%;
+    text-indent: 6%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 6s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#challenges-tags {
+    margin-left: 10%;
+    max-width: 700px;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 6.5s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#conclusion {
+    margin-left: 10%;
+    text-indent: 6%;
+    max-width: 700px;
+
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-delay: 7s;
+    animation-direction: forwords;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+video {
+    position: absolute;
+    left: 1000px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    height: 335px;
+
+    animation-duration: 3s;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-direction: forwords;
+
+
+}
+
+#video-title-group {
+    display: flex;
+    
+    gap: 10em;
+    margin-left: 6%;
+}
+
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+
+}
