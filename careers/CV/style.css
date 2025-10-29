@@ -1,0 +1,130 @@
+/* إعدادات عامة */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* تنسيق العنوان الرئيسي */
+header {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 5px solid #726d98;
+}
+
+header h1 {
+  font-size: 2.8em;
+  color: #2d3436;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1em;
+  color: #555;
+}
+
+header a {
+  color: #9389e3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* الخط الفاصل */
+hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+  margin: 0;
+}
+
+/* تنسيق الأقسام */
+section {
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* عناوين الأقسام */
+h2 {
+  color: #635c97;
+  border-left: 6px solid #a29bfe;
+  padding-left: 10px;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+
+/* النصوص داخل الأقسام */
+p, li {
+  color: #333;
+  font-size: 1.05em;
+}
+
+/* القوائم */
+ul {
+  list-style-type: square;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* التواريخ */
+.date {
+  float: right;
+  color: #6c5ce7;
+  font-weight: bold;
+}
+
+/* الفوتر */
+footer {
+  text-align: center;
+  background-color: #1f1c2c;
+  color: #dfe6e9;
+  padding: 20px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  margin-top: 40px;
+}
+
+/* تأثيرات إضافية */
+section:hover h2 {
+  color: #9188cb;
+  border-left-color: #5e56a0;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .date {
+    float: none;
+    display: block;
+    margin-top: 5px;
+  }
+}

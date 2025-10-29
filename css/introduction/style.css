@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: oklch(86.089% 0.02472 351.196);
+  color: #612977;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+
+h1 {
+  text-align: center;
+  color: rgb(64, 64, 126);
+  margin-bottom: 40px;
+}
+
+
+p {
+  text-align: center; /* هذي الفقرة اللي تحت حقت واي تشوس*/
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+ 
+
+h2, h3 {
+  color: rgb(80, 80, 120);
+  text-align: center; /* هذا العنوان حقت واي تشوس */
+  margin: 10px 0 10px;/* المسافة فوق وتحت العنوان */
+}
+
+hr {
+  border: 0;/* إزالة الحدود الافتراضية */
+  height: 1px; /* سمك الخط */
+  background-color: #2a1aa7;
+  margin: 30px 0;/* المسافة فوق وتحت الخط */
+}
+
+ul {
+  list-style-type: square;/*  نوع الرمز المستخدم للنقاط حقت تشوس*/
+  margin-left: 40px;/* المسافة من اليسار */
+  font-size: 16px;/* حجم الخط */
+  color: #444;/* لون النص */
+}
+
+li {
+  margin-bottom: 10px;/* المسافة بين النقاط */
+}
+
+.abaya-container {/* حاوية العبايات */
+  display: flex;/* استخدام فليكس بوكس */
+  flex-wrap: wrap;/* السماح بالتفاف العناصر */
+  justify-content: center;/* توسيط العناصر أفقياً */
+  gap: 20px;/* المسافة بين العناصر */
+  margin-top: 15px;/* المسافة فوق الحاوية */
+}
+
+
+
+.abaya-card {
+  background-color: white;
+  border: 1px solid #ddd;/* حدود خفيفة */
+  border-radius: 10px;/* زوايا مستديرة */
+  padding: 15px;/* حشوة داخلية */
+  width: 260px;/* عرض البطاقة */
+  text-align: center;
+  transition: transform 0.3s;/* تأثير التحويل عند التمرير */
+}
+
+
+
+.abaya-card:hover {/* تأثير عند التمرير فوق البطاقة */
+  transform: scale(1.03);/* تكبير البطاقة قليلاً */
+  border-color: rgb(139, 139, 190);/* تغيير لون الحدود عند التمرير */
+}
+
+
+
+.abaya-card img {/* صورة العباية داخل البطاقة */
+  width: 100%;/* جعل الصورة تملأ عرض البطاقة */
+  height: auto;/* الحفاظ على نسبة الأبعاد */
+  border-radius: 10px;/* زوايا مستديرة للصورة */
+}
+
+button {/* تصميم زر */
+  background-color: rgb(139, 139, 184);
+  color: white;
+  border: none;/* إزالة الحدود الافتراضية */
+  border-radius: 6px;
+  padding: 8px 14px;
+  margin-top: 8px;
+  cursor: pointer;/* تغيير المؤشر عند التمرير */
+}
+
+button:hover {/* تأثير عند التمرير فوق الزر */
+  background-color: rgb(40, 40, 65);
+}
+
+.new-collection,
+.review,
+.thank-you {
+  text-align: center;
+  margin: 50px;
+  padding: 20px;
+  width: 100%;
+}
+.new-collection {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #faf8fa;
+  border-radius: 10px;
+}
+
+.review { 
+  border-radius: 10px;
+  border: #981717;
+}
+
+.thank-you {
+  text-align: center;
+  font-weight: bold;
+  color: 7a5b48;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.info {
+  text-align: center;
+  color: #7a5b48;
+  margin: 10px auto;
+  line-height: 1.4;
+}
+
+.info p,
+.infoh4 {
+  margin: 4px 0;
+}
+
+.info a {
+  color: #7a5b48;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+.copy {
+  margin-bottom : 10px;
+  font-size: 13px;
+  color: #9b7b6a;
+}
+
+form {/* تصميم النموذج حق التقييم*/
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fffffff5;/* لون خلفية فاتح */
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #981717;/* حدود خفيفة */
+}
+
+label {
+  display: block; /* جعل التسمية كتلة */
+  margin-top: 10px;/* المسافة فوق التسمية اللي داخل الايطار*/
+  font-weight: bold;/* جعل النص عريض */
+}
+
+
+input, select, textarea {/* تصميم حقول الإدخال والقوائم النصية */
+  width: 100%;
+  padding: 6px;
+  margin-top: 5px;/* المسافة فوق الحقول */
+  border: 1px solid #cda7a7;
+  border-radius: 5px;/* زوايا مستديرة */
+}
+
+a {
+  color: rgb(86, 64, 96);
+  text-decoration: none;/* إزالة التسطير الافتراضي */
+}
+
+.new-collection h2 {/* عنوان المجموعة الجديدة */
+  color: rgb(73, 73, 120);
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+
+.new-collection p {/* فقرة وصفية عن المجموعة الجديدة */
+  font-size: 17px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;/
+}
+
+.new-collection a:hover {/* تأثير عند التمرير فوق الرابط */
+  text-decoration: underline;
+}
+
+/* 🌟 خط فاصل بسيط بين الأقسام */
+hr{
+  width: 60%;
+  margin: 30px auto;
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #b85555, transparent);
+}
+
+a:hover {/* تأثير عند التمرير فوق الرابط */
+  text-decoration: underline;
+}
+
+ 
